@@ -45,6 +45,19 @@ include('dashboard/config.php');
 
 
 
+
+        <?php
+
+$sqlget="SELECT * FROM `news`  ORDER BY created_at DESC  LIMIT 2 ";
+$resultget = mysqli_query($conn,$sqlget);
+if($resultget){
+    
+    while($row=mysqli_fetch_array($resultget)){
+    ?>
+    
+    
+    <div class="container">
+      <h2 class="text-center">الأخبار</h2>
     <?php
 
     $sqlget = "SELECT * FROM `news`  ORDER BY created_at DESC  LIMIT 2 ";
@@ -65,9 +78,7 @@ include('dashboard/config.php');
 
 
 
-        echo '
-<div class="container">
-<h2 class="text-center">الأخبار</h2>
+echo '
 <div class="news">
   <div class="rectangle-section left-rectangle">
     <div class="content">
@@ -92,7 +103,7 @@ include('dashboard/config.php');
 </div>
 
 ';
-      }
+     } } }
     } ?>
 
 
