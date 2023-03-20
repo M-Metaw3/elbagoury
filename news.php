@@ -1,0 +1,202 @@
+
+<?php
+
+include('dashboard/config.php');
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <title>الاخبار</title>
+  </head>
+  <body id="home">
+    <header id="navbar">
+      <nav>
+        <button class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="logo">
+          <a href="index.html" onclick="{clickHandle}"
+            ><img src="./imgages/logo.svg" alt="logo"
+          /></a>
+        </div>
+        <ul class="nav-menu">
+          <li><a class="nav-link" href="index.html">الرئيسية</a></li>
+          <li><a class="nav-link" href="about.html">عنا</a></li>
+          <li><a class="nav-link" href="lawyers.html">محامونا</a></li>
+          <li><a class="nav-link" href="news.php">الأخبار</a></li>
+          <li><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <!-- news -->
+    <section class="bg-primary py pb-3">
+
+
+
+
+
+
+
+        <?php
+
+$sqlget="SELECT * FROM `news`  ORDER BY created_at DESC  LIMIT 2 ";
+$resultget = mysqli_query($conn,$sqlget);
+if($resultget){
+    
+    while($row=mysqli_fetch_array($resultget)){
+    ?>
+    
+    
+    <?php
+    
+    $id=$row['id'];
+$news=$row['news'];
+$header=$row['header'];
+$created_at=$row['created_at'];
+
+
+echo '
+<div class="container">
+<h2 class="text-center">الأخبار</h2>
+<div class="news">
+  <div class="rectangle-section left-rectangle">
+    <div class="content">
+    <h6>'.$created_at.'</h6>
+
+
+      <h2 >'.$header.'</h2>
+      <p>
+      '.$news.'
+      </p>
+    </div>
+    <div class="rectangle-section-img">
+      <div class="green-rectangle">
+        <img src="./imgages/صور-محكمة-النقص- 1.svg" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <a href="#">
+      <button class="btn">إقرأ المزيد...</button>
+    </a>
+  </div>
+</div>
+
+';
+}}?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="news">
+          <div class="rectangle-section left-rectangle">
+            <div class="content">
+              <h2>محكمة النقض</h2>
+              <p>
+                مؤسسة الباجوري للمحاماة أُسست عام 1920 على يد الدكتور حسنين
+                الباجوري وأستمر عملها القانوني حتى الأن, في هذه الفترة عملت
+                المؤسسة على العديد من القضايا والأمور القانونية مع العديد من
+                الشركاء كان نتيجتها ثقة الموكلين في هذه المؤسسة العريقة.
+              </p>
+            </div>
+            <div class="rectangle-section-img">
+              <div class="green-rectangle">
+                <img src="./imgages/صور-محكمة-النقص- 1.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <a href="#">
+              <button class="btn">إقرأ المزيد...</button>
+            </a>
+          </div> -->
+        </div>
+    </section>
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top ">
+      <i class="fa-sharp fa-solid fa-chevron-up"></i>
+    </button>
+    <footer>
+      <section class="container">
+          <div class="footer">
+                  <div class="footer-right titles">
+                      <ul class="page-titles">
+                          <li class=" bold">المؤسسة</li>
+                          <li><a href="index.html">الرئيسية</a></li>
+                          <li><a href="lawyers.html">محامونا</a></li>
+                          <li><a href="about.html">عنا</a></li>
+                          <li><a href="news.html">الأخبار</a></li>
+                          <li><a href="contact.html">تواصل معنا</a></li>
+                      </ul>
+                  </div>
+                  <div class="footer-left">
+                      <div class="logo">
+                          <a href="#home"><img src="./imgages/logo.svg" alt="logo" /></a>
+                      </div>
+                      <div class="sociallogos text-center">
+                          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                      </div>
+                  </div>
+          </div>
+      </section>
+
+      <section id="Copyright" class="text-center">
+          <p>&copy; All Rights Reserved, ALBAGORY ORGANIZATION</p>
+          <p>
+              Developed By:
+              <a href="https://irisstudio.org/" target="_blank">IRIS Studio</a>
+          </p>
+      </section>
+  </footer>
+
+    <script
+      src="https://kit.fontawesome.com/f5a62c1078.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
