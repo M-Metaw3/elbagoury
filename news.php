@@ -57,6 +57,8 @@ if($resultget){
     ?>
     
     
+    <div class="container">
+      <h2 class="text-center">الأخبار</h2>
     <?php
     
     $id=$row['id'];
@@ -68,8 +70,6 @@ $image=$row['image'];
 
 
 echo '
-<div class="container">
-<h2 class="text-center">الأخبار</h2>
 <div class="news">
   <div class="rectangle-section left-rectangle">
     <div class="content">
