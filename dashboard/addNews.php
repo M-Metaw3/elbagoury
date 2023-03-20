@@ -15,8 +15,6 @@ if($result){
 
 
 
-
-
 ?>
 
 
@@ -30,13 +28,13 @@ if($result){
     <title>Document</title>
 </head>
 <body>
-<form  method="post" >
+<form action='adduserScript.php'  method="post" >
   <label for="fname">العنوان</label><br>
-  <input autocompelete='off' type="text" id="fname" name="fname" ><br>
+  <input autocomplete="off" type="text" id="fname" name="fname" ><br>
   <label for="lname">الخبر</label><br>
-  <textarea name="news" id="" cols="30" rows="15"></textarea>
+  <textarea autocomplete="off" name="news" id="" cols="30" rows="15"></textarea>
   <button type="submit" name='mmm'> submit</button>
-  
+  <input type="file" name="image" id="image">
 </form> 
 <table>
       <tr >
@@ -51,6 +49,7 @@ if($result){
 
         </tr>
       <?php
+include('config.php');
 
 $sqlget="SELECT * FROM `news`  ORDER BY created_at DESC  ";
 $resultget = mysqli_query($conn,$sqlget);
