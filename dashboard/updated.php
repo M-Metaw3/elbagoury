@@ -7,6 +7,8 @@ if($resulta){
     $rowa=mysqli_fetch_array($resulta);
     $newsa=$rowa['news'];
 $headera=$rowa['header'];
+$image=$rowa['image'];
+
    
 }else{
  die(mysqli_error($conn));
@@ -47,6 +49,8 @@ if (isset($_POST['xx'])){
   <label for="lname">الخبر</label><br>
   <textarea  name="news" id="" cols="30" rows="15"><?php echo $newsa?></textarea>
   <button type="submit" name='xx'> updated</button>
+  <input type="file" name="newimage" id="">
+  <img src=<?php '../images'.$image?> alt="" srcset="">
 
 
 </form> 

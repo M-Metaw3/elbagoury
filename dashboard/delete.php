@@ -1,11 +1,22 @@
 <?php
 include('config.php');
+// $image=$_GET['image'];
+// unlink($image);
 
-if(isset($_GET['deletedid'])){
+if(isset($_GET['deleteid'])){
+    $id=$_GET['deleteid'];
+    $image=$_GET['image'];
+if($image){
+unlink("../images/".$image);
+    
+}
+    
+    echo  $id;
+    echo  $image;
 
-    $id=$_GET['deletedid'];
-    echo $id;
+
    $sql = "DELETE FROM `news` WHERE id=$id";
+  
 $result = mysqli_query($conn,$sql);
 
 if($result){
@@ -17,7 +28,11 @@ if($result){
 }
 
 }
-
+if(isset($_GET['img']))
+{
+    echo "mmmmmm";
+        // echo $image;
+}
 
 ?>
 

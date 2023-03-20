@@ -63,6 +63,8 @@ if($resultget){
 $news=$row['news'];
 $header=$row['header'];
 $created_at=$row['created_at'];
+$image=$row['image'];
+
 
 
 echo '
@@ -81,7 +83,7 @@ echo '
     </div>
     <div class="rectangle-section-img">
       <div class="green-rectangle">
-        <img src="./imgages/صور-محكمة-النقص- 1.svg" alt="" />
+        <img  src="./images/'.$image.'" alt="" />
       </div>
     </div>
   </div>

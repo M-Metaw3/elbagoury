@@ -15,8 +15,6 @@ if($result){
 
 
 
-
-
 ?>
 
 
@@ -30,13 +28,13 @@ if($result){
     <title>Document</title>
 </head>
 <body>
-<form  method="post" >
+<form action='adduserScript.php'  method="post"  enctype="multipart/form-data">
   <label for="fname">العنوان</label><br>
-  <input autocompelete='off' type="text" id="fname" name="fname" ><br>
+  <input autocomplete="off" type="text" id="fname" name="fname" ><br>
   <label for="lname">الخبر</label><br>
-  <textarea name="news" id="" cols="30" rows="15"></textarea>
+  <textarea autocomplete="off" name="news" id="" cols="30" rows="15"></textarea>
+  <input type="file" name="img" >
   <button type="submit" name='mmm'> submit</button>
-  
 </form> 
 <table>
       <tr >
@@ -48,9 +46,9 @@ if($result){
           <th>update</th>
 
 
-
         </tr>
       <?php
+include('config.php');
 
 $sqlget="SELECT * FROM `news`  ORDER BY created_at DESC  ";
 $resultget = mysqli_query($conn,$sqlget);
@@ -66,6 +64,8 @@ if($resultget){
 $news=$row['news'];
 $header=$row['header'];
 $created_at=$row['created_at'];
+$image=$row['image'];
+
 
 echo '
 
@@ -76,7 +76,11 @@ echo '
 <td >'.$news.'</td>
 <td >'.$header.'</td>
 <td >'.$created_at.'</td>
-<td ><button><a href = "delete.php?deletedid='.$id.'">Deleted</a></td></button>
+<td >
+<img src="../images/'.$image.'" width= 200 srcset="">
+</td>
+
+<td ><button><a href="delete.php?deleteid='.$id.'&image=' . $image .'">Deleted</a></td></button>
 <td ><button><a href = "updated.php?updatedid='.$id.'">update</a></td></button>
 </tr>
 
