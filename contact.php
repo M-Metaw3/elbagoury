@@ -86,7 +86,7 @@
           <form method='post' action='dashboard/Contact.php'>
             <div class="form-group">
               <input required  type="text" name="name" placeholder="الأسم" />
-              <input required type="text" name="email" placeholder="موبايل" />
+              <input required type="tel" name="phone" placeholder="موبايل" />
             </div>
             <div>
               <input require type="text" name="subject" placeholder="الموضوع" />

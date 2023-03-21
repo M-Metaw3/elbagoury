@@ -62,10 +62,6 @@ mysqli_close($conn);
 <body>
 
 
-    <!-- <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div> -->
 </body>
 <div class="login">
 <form  method="post" class="login-form">

@@ -127,8 +127,13 @@ body{
   text-decoration: none;
 }
 .admin-name{
-  align-items: center;
-  color: var(--green);
+  margin-top: 0.5rem;
+  text-align: center;
+  color: var(--orange);
+  font-family: "Cairo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+
 } 
 /* .sidebar a.active {
   background-color: var(--orange);
@@ -188,7 +193,6 @@ body{
 }
 
 
-
 .file-input {
   color: transparent;
 }
@@ -200,13 +204,13 @@ body{
   color: var(--orange);
   display: block;
   /* background-color: var(--green-30); */
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
   border: 1px solid var(--green);
-  border-radius: 3px;
   padding: .6rem;
   margin-top: 2rem;
   outline: none;
   cursor: pointer;
-  width: 50%;
+  width: 40%;
 }
 
 .btn-add{

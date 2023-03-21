@@ -37,31 +37,33 @@ if (!$_SESSION) {
 
 <body>
   <div class="dashboard">
-  <div class="sidebar">
-  <img src="../imgages/logo.svg" alt="">
-    <a href="messages.php">Messages</a>
-    <a href="News.php">الاخبار</a>
-    <a href="logout.php">logout</a>
+    <div class="sidebar">
+
+      <img src="../imgages/logo.svg" alt="">
+      <div class="admin-name">
+        <?php
+        echo "Welcom  " . $_SESSION['name'];
+        ?>
+      </div>
+      <a href="messages.php">Messages</a>
+      <a href="News.php">الاخبار</a>
+      <a href="logout.php">logout</a>
+    </div>
+
+    <div class="content">
+      <form class="add-news" action='adduserScript.php' method="post" enctype="multipart/form-data">
+        <label for="fname">العنوان</label>
+        <input autocomplete="off" type="text" id="fname" name="fname"><br>
+        <label for="lname">الخبر</label>
+        <textarea autocomplete="off" name="news" id="" cols="20" rows="6"></textarea>
+        <input type="file" name="img" class="file-input">
+        <button type="submit" name='mmm' class="btn-add">Add</button>
+      </form>
+    </div>
+
+
   </div>
 
-  <div class="content">
-    <form class="add-news" action='adduserScript.php' method="post" enctype="multipart/form-data">
-      <label for="fname">العنوان</label>
-      <input autocomplete="off" type="text" id="fname" name="fname"><br>
-      <label for="lname">الخبر</label>
-      <textarea autocomplete="off" name="news" id="" cols="20" rows="6"></textarea>
-      <input type="file" name="img" class="file-input">
-      <button type="submit" name='mmm' class="btn-add">Add</button>
-    </form>
-  </div>
-
-  <!-- <div class="admin-name">
-    <?php
-  //  echo "welcom  " . $_SESSION['email'];
-   ?>
-    </div> -->
-  </div>
- 
   <!-- <table>
       <tr >
           <th>id</th>
@@ -119,10 +121,7 @@ if (!$_SESSION) {
 
 </table> -->
 
-<script
-      src="https://kit.fontawesome.com/f5a62c1078.js"
-      crossorigin="anonymous"
-    ></script>
+  <script src="https://kit.fontawesome.com/f5a62c1078.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

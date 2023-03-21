@@ -1,4 +1,4 @@
-/* /* @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Harmattan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Harmattan&display=swap');
 /* Main Style */
 :root {
   --green: #005419;
@@ -152,7 +152,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: var(--orange);
+  background-color: #d07e01;
   color: #fff;
   border-radius: 5px;
 }
@@ -718,4 +718,4 @@ li.page-title{
 @keyframes animatetop {
   from {top:-300px; opacity:0}
   to {top:0; opacity:1}
-}  
+}
