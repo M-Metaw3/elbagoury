@@ -103,12 +103,15 @@ echo '
 </div>
 
 ';
-     } } }
-    } 
-    
-    mysqli_free($result);
+}
+
+}
+}
+} 
+
+// mysqli_free($resultget);
 mysqli_close($conn);
-    ?>
+?>
 
 
 

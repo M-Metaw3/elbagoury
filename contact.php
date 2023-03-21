@@ -83,13 +83,13 @@
           </div>
         </div>
         <div class="contact-us py">
-          <form>
+          <form method='post' action='dashboard/Contact.php'>
             <div class="form-group">
-              <input type="text" name="name" placeholder="الأسم" />
-              <input type="email" name="email" placeholder="الإيميل" />
+              <input required  type="text" name="name" placeholder="الأسم" />
+              <input required type="text" name="email" placeholder="موبايل" />
             </div>
             <div>
-              <input type="text" name="subject" placeholder="الموضوع" />
+              <input require type="text" name="subject" placeholder="الموضوع" />
             </div>
             <div>
               <textarea
@@ -97,10 +97,11 @@
                 placeholder="رسالتك..."
                 cols="10"
                 rows="6"
+                required
               ></textarea>
             </div>
             <div class="btn-submit">
-              <button class="btn" type="submit">أرسل</button>
+              <button class="btn" name="addcontact" type="submit">أرسل</button>
             </div>
           </form>
         </div>

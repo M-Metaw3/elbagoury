@@ -40,7 +40,7 @@ if($result){
     echo "data";
     echo $_POST['fname'];
 
-    header('location:addNews.php');
+    header('location:News.php');
     mysqli_free($result);
 
 }
