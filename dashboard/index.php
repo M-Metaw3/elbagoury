@@ -1,6 +1,6 @@
 <?php
-include('config.php');
 session_start();
+include('config.php');
 if($_SESSION){
     header('location:addNews.php');
 
@@ -56,7 +56,7 @@ mysqli_close($conn);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
