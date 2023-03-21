@@ -3,7 +3,7 @@
 if (isset($_POST['addcontact'])){
     
     $name = $_POST['name'];
-    $phone =  $_POST['email'];
+    $phone =  $_POST['phone'];
     $subject = $_POST['subject'];
     $message= $_POST['message'];
     
@@ -32,7 +32,8 @@ if($result){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>contact</title>
 </head>
 <body><div>
 

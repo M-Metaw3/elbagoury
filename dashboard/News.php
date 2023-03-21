@@ -1,12 +1,40 @@
+<?php
+session_start();
+if(!$_SESSION){
+    header('location:index.php');
+    
+}else{
+
+    include('config.php');
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
 </head>
 <body>
+<div class="dashboard">
+    <div class="sidebar">
+      <img src="../imgages/logo.svg" alt="">
+      <div class="admin-name">
+        <?php
+        echo "Welcom  " . $_SESSION['name'];
+        ?>
+      </div>
+      <a href="messages.php">Messages</a>
+      <a href="News.php">الاخبار</a>
+      <a href="logout.php">logout</a>
+    </div>
+
+    <div class="content">
+
 <table>
       <tr >
           <th>id</th>
@@ -61,5 +89,7 @@ echo '
 
 
 </table>
+    </div>
+</div>
 </body>
 </html>
