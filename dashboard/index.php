@@ -56,7 +56,7 @@ mysqli_close($conn);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
@@ -73,10 +73,10 @@ mysqli_close($conn);
             <label>Email </label>
             <input autocomplete="off" type="email" name="email" class="form-control" placeholder="enter your email">
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label>Name </label>
             <input autocomplete="off" type="text" name="name" class="form-control" placeholder="enter your email">
-        </div>
+        </div> -->
 
         <div class="form-group">
             <label>Password </label>
