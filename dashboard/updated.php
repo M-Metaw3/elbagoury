@@ -1,5 +1,11 @@
 <?php
-include('config.php');
+    include('config.php');
+session_start();
+
+if(!$_SESSION){
+    header('location:index.php');
+    
+    }else{
 $id=$_GET['updatedid'];
 $sqlget="SELECT * FROM `news` WHERE id=$id";
 $resulta = mysqli_query($conn,$sqlget);
@@ -15,7 +21,7 @@ $image=$rowa['image'];
 
 }
 
-if (isset($_POST['xx'])){
+if (isset($_POST['update'])){
 
     $header = $_POST['fname'];
     $news = $_POST['news'];
@@ -25,14 +31,15 @@ if (isset($_POST['xx'])){
     if($resultaaa){
         echo 'jjjjjjjjjjj';
    header('location:addNews.php');
+   mysqli_free($resultaaa);
        
     }else{
  die(mysqli_error($conn));
 
     }
     }
-
-
+    }
+    mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +55,7 @@ if (isset($_POST['xx'])){
   <input value=<?php echo $headera?> type="text" id="fname" name="fname" ><br>
   <label for="lname">الخبر</label><br>
   <textarea  name="news" id="" cols="30" rows="15"><?php echo $newsa?></textarea>
-  <button type="submit" name='xx'> updated</button>
+  <button type="submit" name='update'> updated</button>
   <input type="file" name="newimage" id="">
   <img src=<?php '../images'.$image?> alt="" srcset="">
 

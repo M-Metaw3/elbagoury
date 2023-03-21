@@ -31,7 +31,7 @@ include('dashboard/config.php');
         <li><a class="nav-link" href="about.html">عنا</a></li>
         <li><a class="nav-link" href="lawyers.html">محامونا</a></li>
         <li><a class="nav-link" href="news.php">الأخبار</a></li>
-        <li><a class="nav-link" href="contact.html">تواصل معنا</a></li>
+        <li><a class="nav-link" href="contact.php">تواصل معنا</a></li>
       </ul>
     </nav>
 
@@ -104,7 +104,11 @@ echo '
 
 ';
      } } }
-    } ?>
+    } 
+    
+    mysqli_free($result);
+mysqli_close($conn);
+    ?>
 
 
 
