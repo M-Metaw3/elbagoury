@@ -287,14 +287,14 @@ nav ul li a:hover {
   margin-top :3rem;
 }
 .slides {
-  display: none;
+  display: flex;
   width: 100%;
-  justify-content: end;
-  padding: 5rem 0;
+  justify-content: space-evenly;
+  padding: 4rem 0;
   /* height: 200px; */
   align-items: center;
   background-color: var(--orange);
-  /* position: relative; */
+  position: relative;
 }
 
 

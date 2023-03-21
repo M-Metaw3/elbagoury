@@ -15,20 +15,20 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 );
 
 // slider
-let slideIndex = 0;
+let slideIndex = 1;
 
 
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("slides");
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = "flex";
   }
   slideIndex++;
   if (slideIndex > slides.length) {
     slideIndex = 1;
   }
-  slides[slideIndex - 1].style.display = "flex";
+  // slides[slideIndex - 1].style.display = "flex";
   setTimeout(showSlides, 10000); // Change  every 5 seconds
 }
 // news slider
@@ -59,7 +59,7 @@ function currentSlide(n) {
 }
 
 function onHomePageLoad(){
-  showSlides();
+  // showSlides();
   showNewsSlides(newslideIndex);
 }
 
