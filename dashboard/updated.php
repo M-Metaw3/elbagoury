@@ -12,8 +12,8 @@ $resulta = mysqli_query($conn,$sqlget);
 if($resulta){
     $rowa=mysqli_fetch_array($resulta);
     $newsa=$rowa['news'];
-$headera=$rowa['header'];
-$image=$rowa['image'];
+    $headera=$rowa['header'];
+    $image=$rowa['image'];
 
    
 }else{

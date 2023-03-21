@@ -36,7 +36,7 @@ if($result){
 }
 if(isset($_GET['img']))
 {
-    echo "mmmmmm";
+    echo "done";
         // echo $image;
 }
 mysqli_free($result);
