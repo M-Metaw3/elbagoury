@@ -1,6 +1,11 @@
 <?php
-
-include('config.php');
+    include('config.php');
+session_start();
+    
+if(!$_SESSION){
+    header('location:index.php');
+    
+    }else{
 if (isset($_POST['mmm'])){
     
     $header = $_POST['fname'];
@@ -36,11 +41,11 @@ if($result){
     echo $_POST['fname'];
 
     header('location:addNews.php');
-
+    mysqli_free($result);
 
 }
 }
+mysqli_close($conn);
 
-
-
+    }
 ?>

@@ -1,6 +1,12 @@
 <?php
-
+session_start();
 include('config.php');
+if(!$_SESSION){
+header('location:index.php');
+
+}else{
+echo "welcom  ".$_SESSION['email'];
+
 if (isset($_POST['mmm'])){
 
 $header = $_POST['fname'];
@@ -10,11 +16,14 @@ $sql ="INSERT INTO `news` ( `header`, `news`) VALUES ( '$header', '$news');";
 $result = mysqli_query($conn,$sql);
 if($result){
     echo "data";
+ 
+
+
 }
 }
 
-
-
+mysqli_close($conn);
+}
 ?>
 
 
@@ -28,6 +37,11 @@ if($result){
     <title>Document</title>
 </head>
 <body>
+<a href="logout.php">logout</a>
+<a href="messages.php">Messages</a>
+<a href="News.php">الاخبار</a>
+
+
 <form action='adduserScript.php'  method="post"  enctype="multipart/form-data">
   <label for="fname">العنوان</label><br>
   <input autocomplete="off" type="text" id="fname" name="fname" ><br>
@@ -36,7 +50,7 @@ if($result){
   <input type="file" name="img" >
   <button type="submit" name='mmm'> submit</button>
 </form> 
-<table>
+<!-- <table>
       <tr >
           <th>id</th>
           <th>news</th>
@@ -48,48 +62,48 @@ if($result){
 
         </tr>
       <?php
-include('config.php');
+// include('config.php');
 
-$sqlget="SELECT * FROM `news`  ORDER BY created_at DESC  ";
-$resultget = mysqli_query($conn,$sqlget);
-if($resultget){
+// $sqlget="SELECT * FROM `news`  ORDER BY created_at DESC  ";
+// $resultget = mysqli_query($conn,$sqlget);
+// if($resultget){
     
-    while($row=mysqli_fetch_array($resultget)){
-    ?>
+//     while($row=mysqli_fetch_array($resultget)){
+//     ?>
     
     
-    <?php
+//     <?php
     
-    $id=$row['id'];
-$news=$row['news'];
-$header=$row['header'];
-$created_at=$row['created_at'];
-$image=$row['image'];
+// $id=$row['id'];
+// $news=$row['news'];
+// $header=$row['header'];
+// $created_at=$row['created_at'];
+// $image=$row['image'];
 
 
-echo '
-
-
-
-<tr >
-<td " >'.$id.'</td>
-<td >'.$news.'</td>
-<td >'.$header.'</td>
-<td >'.$created_at.'</td>
-<td >
-<img src="../images/'.$image.'" width= 200 srcset="">
-</td>
-
-<td ><button><a href="delete.php?deleteid='.$id.'&image=' . $image .'">Deleted</a></td></button>
-<td ><button><a href = "updated.php?updatedid='.$id.'">update</a></td></button>
-</tr>
-
-';
-}}?>
+// echo '
 
 
 
-</table>
+// <tr >
+// <td " >'.$id.'</td>
+// <td >'.$news.'</td>
+// <td >'.$header.'</td>
+// <td >'.$created_at.'</td>
+// <td >
+// <img src="../images/'.$image.'" width= 200 srcset="">
+// </td>
+
+// <td ><button><a href="delete.php?deleteid='.$id.'&image=' . $image .'">Deleted</a></td></button>
+// <td ><button><a href = "updated.php?updatedid='.$id.'">update</a></td></button>
+// </tr>
+
+// ';
+// }}?>
+
+
+
+</table> -->
 
 </body>
 </html>

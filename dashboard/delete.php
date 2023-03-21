@@ -1,5 +1,11 @@
 <?php
-include('config.php');
+    include('config.php');
+session_start();
+
+if(!$_SESSION){
+    header('location:index.php');
+    
+}else{
 // $image=$_GET['image'];
 // unlink($image);
 
@@ -33,6 +39,8 @@ if(isset($_GET['img']))
     echo "mmmmmm";
         // echo $image;
 }
-
+mysqli_free($result);
+mysqli_close($conn);
+}
 ?>
 
