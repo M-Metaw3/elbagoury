@@ -6,6 +6,7 @@
   --green-30: rgba(0, 84, 25, 30%);
   --green-70:rgba(0, 84, 25,70%);
   --black: rgb(34, 34, 34);
+  --black-50: rgba(34, 34, 34,50%);
   --white: rgb(255, 248, 219);
   --white-70:rgba(255, 248, 219,70%);
   --white-5:rgba(255, 248, 219,10%);
@@ -17,18 +18,24 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
+  direction: rtl;
   
 }
-body {
+body{
+  background-color: var(--white);
+
+}
+.login {
   background-image: url(../imgages/background.png) ;
   background-size:cover;
   background-repeat: no-repeat;
   height: 100VH;
-
 }
 
-form {
-  height: 520px;
+
+/* login form */
+.login-form {
+  height: 550px;
   width: 450px;
   background-color: var(--white-5);
   position: absolute;
@@ -40,20 +47,22 @@ form {
   border: 2px solid rgba(255, 255, 255, 0.1);
   padding: 50px 35px;
 }
-form * {
+.login-form * {
   font-family: "Cairo", sans-serif;
   letter-spacing: 0.5px;
   outline: none;
   border: none;
+  direction: ltr;
+
 }
-form img {
+.login-form img {
     display: block;
     margin: 0 auto;
     width: 100%;
     margin-bottom: 2rem;
 }
 
-label {
+.login-form label {
   display: block;
   margin-top: 2rem;
   font-size: 1.2rem;
@@ -61,7 +70,7 @@ label {
   color: var(--white);
 
 }
-input {
+.form-control {
   display: block;
   height: 50px;
   width: 100%;
@@ -75,7 +84,7 @@ input {
 ::placeholder {
   color: var(--black);
 }
-button {
+.btn-login {
   margin-top: 4rem;
   width: 100%;
   background-color:var(--orange);
@@ -85,4 +94,131 @@ button {
   font-weight: 600;
   border-radius: .3rem;
   cursor: pointer;
+}
+
+.dashboard{
+  display: flex;
+  justify-content: start;
+  width: 100%;
+
+}
+
+/* sidebar */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 18%;
+  background-color: var(--green);
+  position: fixed;
+  height: 100%;
+  /* overflow:auto; */
+}
+.sidebar img{
+  padding: 1rem 0;
+  display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+.sidebar a {
+  display: block;
+  color: var(--orange);
+  padding: 1rem;
+  margin: 1rem 0;
+  text-decoration: none;
+}
+.admin-name{
+  align-items: center;
+  color: var(--green);
+} 
+/* .sidebar a.active {
+  background-color: var(--orange);
+  color: var(--white);
+} */
+
+.sidebar a:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+.content {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  margin-right: 15%;
+  /* padding: 1px 16px; */
+  /* height: 1000px; */
+}
+
+.add-news{
+  width: 650px;
+  background-color: var(--white-5);
+  position: absolute;
+  /* transform: translate(-50%, -50%); */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* border-radius: 10px; */
+  border: 2px solid var(--green-30);
+  padding: 0 2rem;
+  /* background-color:var(--black); */
+
+}
+  .add-news *{
+  font-family: "Cairo", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  outline: none;
+  border: none;
+}
+.add-news label{
+  display: block;
+  margin-top: 2rem;
+  color: var(--orange);
+
+}
+.add-news input[type=text],.add-news textarea {
+  width: 100%;
+  padding: .6rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--green);
+  resize: vertical;
+  color: var(--black);
+  background-color: var(--white);
+  font-size: 1.2rem;
+}
+
+
+
+.file-input {
+  color: transparent;
+}
+.file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.file-input::before {
+  content: 'أختر صورة';
+  color: var(--orange);
+  display: block;
+  /* background-color: var(--green-30); */
+  border: 1px solid var(--green);
+  border-radius: 3px;
+  padding: .6rem;
+  margin-top: 2rem;
+  outline: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+.btn-add{
+  width: 100%;
+  background-color:var(--orange);
+  color:var(--white);
+  font-size: 1.2rem;
+  font-weight: 600;
+  /* border-radius: .3rem; */
+  cursor: pointer;
+  margin: .5rem 0;
+  padding: .6rem;
+
+
 }

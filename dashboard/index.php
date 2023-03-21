@@ -66,28 +66,24 @@ mysqli_close($conn);
         <div class="shape"></div>
         <div class="shape"></div>
     </div> -->
-
-    <form  method="post">
+</body>
+<div class="login">
+<form  method="post" class="login-form">
             <img src="../imgages/logo.svg" alt="">
-        <div class="form-group">
             <label>Email </label>
             <input autocomplete="off" type="email" name="email" class="form-control" placeholder="enter your email">
-        </div>
         <!-- <div class="form-group">
             <label>Name </label>
             <input autocomplete="off" type="text" name="name" class="form-control" placeholder="enter your email">
         </div> -->
 
-        <div class="form-group">
             <label>Password </label>
             <input autocomplete="off" type="password" name="password" class="form-control" placeholder="enter your password">
-        </div>
-        <div class="form-group">
-            <button type="submit" name="submit" class="btn btn-outline-light btn-lg px-5">login</button>
-        </div>
+            <button type="submit" name="submit" class="btn-login">login</button>
      
-
     </form>
+</div>
+ 
 
 
 </body>

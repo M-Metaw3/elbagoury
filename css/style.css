@@ -152,7 +152,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #d07e01;
+  background-color: var(--orange);
   color: #fff;
   border-radius: 5px;
 }
