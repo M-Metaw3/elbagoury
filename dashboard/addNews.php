@@ -42,12 +42,12 @@ if (!$_SESSION) {
       <img src="../imgages/logo.svg" alt="">
       <div class="admin-name">
         <?php
-        echo "Welcom  " . $_SESSION['name'];
+        echo "مرحبا  " . $_SESSION['name'];
         ?>
       </div>
-      <a href="messages.php">Messages</a>
+      <a href="messages.php">الرسائل</a>
       <a href="News.php">الاخبار</a>
-      <a href="logout.php">logout</a>
+      <a href="logout.php">تسجيل الخروج</a>
     </div>
 
     <div class="content">

@@ -3,8 +3,6 @@ session_start();
 include('config.php');
 if($_SESSION){
     header('location:addNews.php');
-
-
 }else{
 
 
@@ -28,26 +26,20 @@ if($row=mysqli_fetch_array($result)){
 $_SESSION['id']=$row['id'];
 $_SESSION["name"]=$row['name'];
 $_SESSION["email"]=$row['email'];
-    header('location:addNews.php');
-
-
+header('location:addNews.php');
 
 }else{
-    //  die(mysqli_error($conn));
+   
+    $error="الايميل او الباسورد غير صحيح برجاء اعادة المحاولة ببيانات صحيحة";
     
-    // echo '<h1> password with email </h1>';
-    header('location:index.php');
-
 };
    
  
-mysqli_free($result);
+
     
 }else {
     echo "xxxxxxxxxxxxxxxxxxx";
-    // header('location:index.php');
-    
-    // header('location:addNews.php');
+
 };
 mysqli_close($conn);
 }
@@ -79,6 +71,7 @@ mysqli_close($conn);
             <label>Password </label>
             <input autocomplete="off" type="password" name="password" class="form-control" placeholder="enter your password">
             <button type="submit" name="submit" class="btn-login">login</button>
+            <?php if(isset($error)){ echo $error;}?>
             
      
     </form>
