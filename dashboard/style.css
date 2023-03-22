@@ -123,8 +123,9 @@ body{
 .sidebar a ,.select{
   display: block;
   color: var(--orange);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 .logout{
   position: absolute;
@@ -137,7 +138,7 @@ justify-content: space-between;
 }
 
 .news{
-  /* display: none; */
+  display:none;
   background-color: var(--white);
   padding: 0 1rem;
 }
@@ -148,6 +149,8 @@ justify-content: space-between;
   font-family: "Cairo", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
+  margin-bottom: 3rem;
+
 
 } 
 /* .sidebar a.active {
@@ -191,7 +194,7 @@ justify-content: space-between;
 .add-news input[type=text],.add-news textarea {
   width: 100%;
   padding: .5rem;
-  margin-top: 1rem;
+  margin: .5rem 0;
   /* border: 1px solid var(--green); */
   resize: vertical;
   color: var(--black);
@@ -206,7 +209,8 @@ input[type=file]{
   cursor: pointer;
   text-align:center;
   /* color: var(--black) !important; */
-  margin-bottom: 0.5rem;
+  margin: .5rem 0;
+  padding: .5rem;
   border:thin solid var(--orange);
   /* width: 30%;
   margin: 0 auto; */
@@ -221,7 +225,7 @@ input[type=file]{
   /* border-radius: .3rem; */
   cursor: pointer;
   margin: .5rem 0;
-  padding: .6rem;
+  padding: .5rem;
 
 }
 /* .hscroll {

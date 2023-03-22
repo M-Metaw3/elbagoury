@@ -22,16 +22,25 @@ if (!$_SESSION) {
 <body>
     <div class="dashboard">
         <div class="sidebar">
+
             <img src="../imgages/logo.svg" alt="">
             <div class="admin-name">
                 <?php
-        echo "مرحبا  " . $_SESSION['name'];
-        ?>
+                echo "مرحبا  " . $_SESSION['name'];
+                ?>
             </div>
-            <a href="addNews.php">إضافة خبر</a>
+            <div class="select">
+                <span>الأخبار</span>
+                <span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </span>
+            </div>
+            <div class="news">
+                <a href="News.php">عرض الأخبار</a>
+                <a href="addNews.php">إضافة خبر</a>
+            </div>
             <a href="messages.php">الرسائل</a>
-            <a href="News.php">الاخبار</a>
-            <a href="logout.php">تسجيل خروج</a>
+            <a class="logout" href="logout.php">تسجيل خروج</a>
         </div>
 
         <div class="content hscroll">

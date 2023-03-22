@@ -48,7 +48,7 @@ if (!$_SESSION) {
       <!-- <a href="News.php"  class="select"> -->
       <div class="select">
       <span>الأخبار</span>
-      <span id="selectNews">
+      <span >
         <i class="fa-solid fa-chevron-down"></i>
       </span>
       </div>
@@ -72,7 +72,7 @@ if (!$_SESSION) {
         <label for="img" class="file-input">
         أرفع الصورة   
         <i class="fa-solid fa-camera"></i>
-          <input type="file" id="img" name="img" >
+          <input type="file" id="img" name="img" onchange="uploadImag()" >
           <span id="imageName"></span>
         </label>
         <button type="submit" name='mmm' class="btn-add">نشر</button>
