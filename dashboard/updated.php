@@ -29,7 +29,7 @@ if (isset($_POST['update'])){
 echo $image_name;
     $header = $_POST['fname'];
     $news = $_POST['news'];
-    $sql = "UPDATE `news` SET `header`='.$header.',`news`='.$news.',`image`='$image_name' WHERE id=$id";
+    $sql = "UPDATE `news` SET `header`='$header',`news`='$news',`image`='$image_name' WHERE id=$id";
     
     $resultaaa = mysqli_query($conn,$sql);
     if($resultaaa){
