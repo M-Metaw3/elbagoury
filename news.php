@@ -88,7 +88,7 @@ echo '
 
       <h2 >' . $header . '</h2>
       <p>
-      ' . $bref . '
+      ' . $bref . '  
       </p>
     </div>
     <div class="rectangle-section-img">
