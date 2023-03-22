@@ -40,6 +40,9 @@ if (!$_SESSION) {
                     <th>الرقم التعريفي</th>
                     <th>العنوان</th>
                     <th>الخبر</th>
+                    <th>الاختصار</th>
+
+
                     <th> تاريخ الخبر</th>
                     <th>صورة الخبر</th>
                     <th>تعديل</th>
@@ -64,6 +67,10 @@ if (!$_SESSION) {
                         $news = $row['news'];
                         $created_at = $row['created_at'];
                         $image = $row['image'];
+                        $bref = $row['bref'];
+
+                        
+
 
 
                         echo '
@@ -74,6 +81,8 @@ if (!$_SESSION) {
 <td " >' . $id . '</td>
 <td >' . $header . '</td>
 <td >' . $news . '</td>
+<td >' . $bref . '</td>
+
 <td >' . $created_at . '</td>
 <td >
     <img src="../images/' . $image . '" width= 100 srcset="">
