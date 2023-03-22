@@ -53,7 +53,6 @@ $sql= "SELECT * FROM `news` WHERE  id=$id";
     <h1>'.$createdat.'</h1>
     <img src="./images/'.$image.'" width= 200 srcset="">
    
-  
     ';
     }
     ?>

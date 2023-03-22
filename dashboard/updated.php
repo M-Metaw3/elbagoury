@@ -24,14 +24,25 @@ if($resulta){
 
 if (isset($_POST['update'])){
 
-
+    $image_file = $_FILES["img"];
+    $image_name= $image_file['name'];
+echo $image_name;
     $header = $_POST['fname'];
     $news = $_POST['news'];
-    $sql = "UPDATE news SET news='$news', header='$header'  WHERE id=$id";
+    $sql = "UPDATE `news` SET `header`='.$header.',`news`='.$news.',`image`='.$image_name.' WHERE id=$id";
     
     $resultaaa = mysqli_query($conn,$sql);
     if($resultaaa){
+        move_uploaded_file(
+        
+            $image_file["tmp_name"],
+        
+           
+            "../images/" . $image_file["name"]
+        );
         echo 'jjjjjjjjjjj';
+unlink("../images/".$image);
+
    header('location:addNews.php');
 //    mysqli_free($resultaaa);
        
@@ -52,13 +63,13 @@ if (isset($_POST['update'])){
     <title>Document</title>
 </head>
 <body>
-<form  method="post" >
+<form  method="post" enctype="multipart/form-data" >
   <label for="fname">العنوان</label><br>
   <input value=<?php echo $headera?> type="text" id="fname" name="fname" ><br>
   <label for="lname">الخبر</label><br>
   <textarea  name="news" id="" cols="30" rows="15"><?php echo $newsa?></textarea>
   <button type="submit" name='update'> updated</button>
-  <input type="file" name="newimage" id="">
+  <input type="file" name="img" id="">
   <?php echo '<img src="../images/'.$image.'" width= 200 srcset="">'?>
   
 
