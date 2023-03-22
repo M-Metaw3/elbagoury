@@ -14,6 +14,7 @@ if($resulta){
     $newsa=$rowa['news'];
     $headera=$rowa['header'];
     $image=$rowa['image'];
+    
 
    
 }else{
@@ -23,6 +24,7 @@ if($resulta){
 
 if (isset($_POST['update'])){
 
+
     $header = $_POST['fname'];
     $news = $_POST['news'];
     $sql = "UPDATE news SET news='$news', header='$header'  WHERE id=$id";
@@ -31,7 +33,7 @@ if (isset($_POST['update'])){
     if($resultaaa){
         echo 'jjjjjjjjjjj';
    header('location:addNews.php');
-   mysqli_free($resultaaa);
+//    mysqli_free($resultaaa);
        
     }else{
  die(mysqli_error($conn));
@@ -57,7 +59,8 @@ if (isset($_POST['update'])){
   <textarea  name="news" id="" cols="30" rows="15"><?php echo $newsa?></textarea>
   <button type="submit" name='update'> updated</button>
   <input type="file" name="newimage" id="">
-  <img src=<?php '../images'.$image?> alt="" srcset="">
+  <?php echo '<img src="../images/'.$image.'" width= 200 srcset="">'?>
+  
 
 
 </form> 

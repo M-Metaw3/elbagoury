@@ -1,6 +1,7 @@
 <!-- <?php
 session_start();
 include('config.php');
+$mm='';
 if($_SESSION){
     header('location:addNews.php');
 }else{
@@ -30,7 +31,8 @@ header('location:addNews.php');
 
 }else{
    
-    $error="الايميل او الباسورد غير صحيح برجاء اعادة المحاولة ببيانات صحيحة";
+    $error="<p>الايميل او الباسورد غير صحيح برجاء اعادة المحاولة ببيانات صحيحة</P>";
+
     
 };
    

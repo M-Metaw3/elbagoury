@@ -97,7 +97,8 @@ echo '
   </div>
   <div class="text-center">
     <a href="#">
-      <button class="btn">إقرأ المزيد...</button>
+<td ><button><a href = "Details.php?updatedid='.$id.'">اقراء المزيد</a></td></button>
+ 
     </a>
   </div>
 </div>
