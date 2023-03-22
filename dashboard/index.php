@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 include('config.php');
 if($_SESSION){
@@ -14,13 +14,13 @@ if($_SERVER['REQUEST_METHOD']=='POST' && (isset($_POST['submit']) && isset($_POS
 $email = $_POST['email'];
 $password = $_POST['password'];
 $name = $_POST['name'];
-$pass_hash=sha1($password);
+// $pass_hash=sha1($password);
 
 
 // $sql ="INSERT INTO `users` ( `email`, `password`,`name`) VALUES (  '$email','$pass_hash','$name');";
 // $sql= "SELECT * FROM `users` WHERE  email=$email";
 
-$sql = "SELECT * FROM `users` WHERE `email`='$email' AND `password`='$pass_hash' LIMIT 1;";
+$sql = "SELECT * FROM `users` WHERE `email`='$email' AND `password`='$password' LIMIT 1;";
 $result = mysqli_query($conn,$sql);
 if($row=mysqli_fetch_array($result)){
 //   echo   "<script >alert('metawea')</script>";
@@ -33,6 +33,9 @@ $_SESSION["email"]=$row['email'];
 
 
 }else{
+    //  die(mysqli_error($conn));
+    
+    // echo '<h1> password with email </h1>';
     header('location:index.php');
 
 };
@@ -41,14 +44,14 @@ $_SESSION["email"]=$row['email'];
 mysqli_free($result);
     
 }else {
-    // echo "xxxxxxxxxxxxxxxxxxx";
+    echo "xxxxxxxxxxxxxxxxxxx";
     // header('location:index.php');
     
     // header('location:addNews.php');
 };
 mysqli_close($conn);
 }
-?>
+?> -->
 
 <!doctype html>
 <html lang="en">
@@ -76,6 +79,7 @@ mysqli_close($conn);
             <label>Password </label>
             <input autocomplete="off" type="password" name="password" class="form-control" placeholder="enter your password">
             <button type="submit" name="submit" class="btn-login">login</button>
+            
      
     </form>
 </div>
