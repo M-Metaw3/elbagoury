@@ -43,7 +43,7 @@ echo $image_name;
         );
         echo 'jjjjjjjjjjj';
 
-   header('location:addNews.php');
+   header('location:News.php');
 //    mysqli_free($resultaaa);
        
     }else{
@@ -60,6 +60,7 @@ echo $image_name;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
 </head>
 <body>
@@ -100,12 +101,16 @@ echo $image_name;
                 <label for="img" class="file-input">
                     تعديل الصورة
                     <i class="fa-solid fa-camera"></i>
-                    <input type="file" id="img" name="img">
+                    <input type="file" id="img" name="img" onchange="uploadImag()">
                     <span id="imageName"></span>
                 </label>
                 <button type="submit" name='update' class="btn-add">تعديل</button>
 
 
 </form> 
+
+<script src="https://kit.fontawesome.com/f5a62c1078.js" crossorigin="anonymous"></script>
+
+<script src="./js/main.js"></script>
 </body>
 </html>
