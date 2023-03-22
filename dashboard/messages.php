@@ -29,25 +29,26 @@ if(!$_SESSION){
         echo "Welcom  " . $_SESSION['name'];
         ?>
       </div>
-      <a href="messages.php">Messages</a>
+      <a href="addNews.php">إضافة خبر</a>
+      <a href="messages.php">الرسائل</a>
       <a href="News.php">الاخبار</a>
-      <a href="logout.php">logout</a>
+      <a href="logout.php">تسجيل خروج</a>
     </div>
 
     <div class="content">
 
 <table>
       <tr >
-          <th>id</th>
-          <th>name</th>
-          <th>phone</th>
-          <th>subject</th>
-          <th>message</th>
+          <th>الرقم التعريفي</th>
+          <th>الأسم</th>
+          <th>رقم الموبايل</th>
+          <th>الموضوع</th>
+          <th>الرسالة</th>
 
 
-          <th>created at</th>
+          <th>التاريخ</th>
         
-          <th>delete</th>
+          <th>حذف</th>
 
 
         </tr>
@@ -86,7 +87,7 @@ echo '
 <td >'.$message.'</td>
 <td >'.$send_at.'</td>
 
- <td ><button><a href = "deletedconatctmessage.php?updatedid='.$id.'">deleted</a></td></button>
+ <td ><a href = "deletedconatctmessage.php?updatedid='.$id.'"><i class="fa-solid fa-trash"></i></a></td>
 
 </td>
 
@@ -103,5 +104,8 @@ echo '
 
 
 </div>
+<script src="https://kit.fontawesome.com/f5a62c1078.js" crossorigin="anonymous"></script>
+
+<script src="./js/main.js"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@ $result = mysqli_query($conn,$sql);
 
 if($result){
 
-    header('location:addNews.php');
+    header('location:News.php');
 
 }else{
     echo('somthing wrong');

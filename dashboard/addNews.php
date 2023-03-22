@@ -45,19 +45,37 @@ if (!$_SESSION) {
         echo "Welcom  " . $_SESSION['name'];
         ?>
       </div>
-      <a href="messages.php">Messages</a>
-      <a href="News.php">الاخبار</a>
-      <a href="logout.php">logout</a>
+      <!-- <a href="News.php"  class="select"> -->
+      <div class="select">
+      <span>الأخبار</span>
+      <span id="selectNews">
+        <i class="fa-solid fa-chevron-down"></i>
+      </span>
+      </div>
+   
+      <!-- </a> -->
+      <div class="news">
+        <a href="News.php">عرض الأخبار</a>
+        <a href="addNews.php">إضافة خبر</a>
+      </div>
+      <a href="messages.php">الرسائل</a>
+      <a class="logout" href="logout.php">تسجيل خروج</a>
     </div>
 
     <div class="content">
       <form class="add-news" action='adduserScript.php' method="post" enctype="multipart/form-data">
-        <label for="fname">العنوان</label>
-        <input autocomplete="off" type="text" id="fname" name="fname"><br>
-        <label for="lname">الخبر</label>
-        <textarea autocomplete="off" name="news" id="" cols="20" rows="6"></textarea>
-        <input type="file" name="img" class="file-input">
-        <button type="submit" name='mmm' class="btn-add">Add</button>
+        <!-- <label for="fname">العنوان</label> -->
+        <input autocomplete="off" type="text" id="fname" name="fname" placeholder="عنوان الخبر"><br>
+        <input autocomplete="off" type="text" id="fname" name="fname" placeholder="اختصار"><br>
+        <!-- <label for="lname">الخبر</label> -->
+        <textarea autocomplete="off" name="news" id="" cols="20" rows="6" placeholder="تفاصيل الخبر..."></textarea>
+        <label for="img" class="file-input">
+        أرفع الصورة   
+        <i class="fa-solid fa-camera"></i>
+          <input type="file" id="img" name="img" >
+          <span id="imageName"></span>
+        </label>
+        <button type="submit" name='mmm' class="btn-add">نشر</button>
       </form>
     </div>
 
@@ -122,6 +140,9 @@ if (!$_SESSION) {
 </table> -->
 
   <script src="https://kit.fontawesome.com/f5a62c1078.js" crossorigin="anonymous"></script>
+
+  <script src="./js/main.js"></script>
+
 </body>
 
 </html>
