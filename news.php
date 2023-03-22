@@ -75,6 +75,8 @@ if($resultget){
         $header = $row['header'];
         $created_at = $row['created_at'];
         $image = $row['image'];
+        $bref = $row['bref'];
+
 
 
 
@@ -86,7 +88,7 @@ echo '
 
       <h2 >' . $header . '</h2>
       <p>
-      ' . $news . '
+      ' . $bref . '
       </p>
     </div>
     <div class="rectangle-section-img">
@@ -97,7 +99,7 @@ echo '
   </div>
   <div class="text-center">
     <a href="#">
-<td ><button><a href = "updated.php?updatedid='.$id.'">اقراء المزيد ....</a></td></button>
+<td ><button><a href = "Details.php?updatedid='.$id.'">اقراء المزيد ....</a></td></button>
  
     </a>
   </div>
