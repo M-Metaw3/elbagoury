@@ -23,6 +23,7 @@ $sql= "SELECT * FROM `news` WHERE  id=$id";
           $createdat= $row['created_at'];
           $image= $row['image'];
           $bref= $row['bref'];
+        
 
           
           
@@ -48,8 +49,10 @@ $sql= "SELECT * FROM `news` WHERE  id=$id";
         ?>
         <?php
     echo '
-    <h1>'.$news.'</h1>
     <h1>'.$header.'</h1>
+    <h1>'.$bref.'</h1>
+
+    <h1>'.$news.'</h1>
     <h1>'.$createdat.'</h1>
     <img src="./images/'.$image.'" width= 200 srcset="">
    

@@ -10,7 +10,9 @@ if (!$_SESSION) {
 
     $header = $_POST['fname'];
     $news = $_POST['news'];
-    $sql = "INSERT INTO `news` ( `header`, `news`) VALUES ( '$header', '$news');";
+    $brief = $_POST['aname'];
+
+    $sql = "INSERT INTO `news` ( `header`, `news`,`bref`) VALUES ( '$header', '$news','$brief');";
 
     $result = mysqli_query($conn, $sql);
     if ($result) {
@@ -66,7 +68,7 @@ if (!$_SESSION) {
       <form class="add-news" action='adduserScript.php' method="post" enctype="multipart/form-data">
         <!-- <label for="fname">العنوان</label> -->
         <input autocomplete="off" type="text" id="fname" name="fname" placeholder="عنوان الخبر"><br>
-        <input autocomplete="off" type="text" id="fname" name="fname" placeholder="اختصار"><br>
+        <input autocomplete="off" type="text" id="fname" name="aname" placeholder="اختصار"><br>
         <!-- <label for="lname">الخبر</label> -->
         <textarea autocomplete="off" name="news" id="" cols="20" rows="6" placeholder="تفاصيل الخبر..."></textarea>
         <label for="img" class="file-input">

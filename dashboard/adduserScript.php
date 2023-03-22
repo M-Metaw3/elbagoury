@@ -9,6 +9,9 @@ if(!$_SESSION){
 if (isset($_POST['mmm'])){
     
     $header = $_POST['fname'];
+    // $header = $_POST['fname'];
+    $bref = $_POST['aname'];
+
     $news = $_POST['news'];
     $image_file = $_FILES["img"];
     $image_name= $image_file['name'];
@@ -33,7 +36,7 @@ echo $image_name;
 
 
 
-$sql ="INSERT INTO `news` ( `header`, `news`,`image`) VALUES ( '$header', '$news','$image_name');";
+$sql ="INSERT INTO `news` ( `header`, `news`,`image`,`bref`) VALUES ( '$header', '$news','$image_name','$bref');";
 
 $result = mysqli_query($conn,$sql);
 if($result){
