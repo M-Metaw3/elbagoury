@@ -46,7 +46,41 @@ if (!$_SESSION) {
         }
     }
 }
+<<<<<<< HEAD
 mysqli_close($conn);
+=======
+
+if (isset($_POST['update'])){
+
+    $image_file = $_FILES["img"];
+    $image_name= $image_file['name'];
+    $header = $_POST['fname'];
+    $news = $_POST['news'];
+    $sql = "UPDATE `news` SET `header`='.$header.',`news`='.$news.',`image`='$image_name' WHERE id=$id";
+    
+    $resultaaa = mysqli_query($conn,$sql);
+    if($resultaaa){
+        unlink("../images/".$image);
+        move_uploaded_file(
+        
+            $image_file["tmp_name"],
+        
+           
+            "../images/" . $image_file["name"]
+        );
+        echo 'jjjjjjjjjjj';
+
+   header('location:addNews.php');
+//    mysqli_free($resultaaa);
+       
+    }else{
+ die(mysqli_error($conn));
+
+    }
+    }
+    }
+    mysqli_close($conn);
+>>>>>>> a33ef43 (fixed)
 ?>
 <!DOCTYPE html>
 <html lang="en">
