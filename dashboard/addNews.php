@@ -42,24 +42,12 @@ if (!$_SESSION) {
       <img src="../imgages/logo.svg" alt="">
       <div class="admin-name">
         <?php
-        echo "Welcom  " . $_SESSION['name'];
+        echo "مرحبا  " . $_SESSION['name'];
         ?>
       </div>
-      <!-- <a href="News.php"  class="select"> -->
-      <div class="select">
-      <span>الأخبار</span>
-      <span id="selectNews">
-        <i class="fa-solid fa-chevron-down"></i>
-      </span>
-      </div>
-   
-      <!-- </a> -->
-      <div class="news">
-        <a href="News.php">عرض الأخبار</a>
-        <a href="addNews.php">إضافة خبر</a>
-      </div>
-      <a href="messages.php">الرسائل</a>
-      <a class="logout" href="logout.php">تسجيل خروج</a>
+      <a href="messages.php">Messages</a>
+      <a href="News.php">الاخبار</a>
+      <a href="logout.php">logout</a>
     </div>
 
     <div class="content">

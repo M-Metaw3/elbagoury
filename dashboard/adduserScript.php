@@ -17,12 +17,12 @@ echo $image_name;
         die('No file uploaded.');
     }
     
-    // Move the temp image file to the images/ directory
+    
     move_uploaded_file(
-        // Temp image location
+        
         $image_file["tmp_name"],
     
-        // New image location, __DIR__ is the location of the current PHP file
+       
         "../images/" . $image_file["name"]
     );
 

@@ -20,6 +20,7 @@ if (!$_SESSION) {
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="dashboard">
         <div class="sidebar">
             <img src="../imgages/logo.svg" alt="">
@@ -33,6 +34,20 @@ if (!$_SESSION) {
             <a href="News.php">الاخبار</a>
             <a href="logout.php">تسجيل خروج</a>
         </div>
+=======
+<div class="dashboard">
+    <div class="sidebar">
+      <img src="../imgages/logo.svg" alt="">
+      <div class="admin-name">
+        <?php
+        echo "مرحبا  " . $_SESSION['name'];
+        ?>
+      </div>
+      <a href="messages.php">الرسائل</a>
+      <a href="News.php">الاخبار</a>
+      <a href="logout.php">تسجيل الخروج</a>
+    </div>
+>>>>>>> 79cc427ad1903c9fe15f28c0dcd9661bca3d5814
 
         <div class="content hscroll">
             <table>

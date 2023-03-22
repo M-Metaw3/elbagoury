@@ -26,13 +26,19 @@ if(!$_SESSION){
       <img src="../imgages/logo.svg" alt="">
       <div class="admin-name">
         <?php
-        echo "Welcom  " . $_SESSION['name'];
+        echo "مرحبا  " . $_SESSION['name'];
         ?>
       </div>
+<<<<<<< HEAD
       <a href="addNews.php">إضافة خبر</a>
       <a href="messages.php">الرسائل</a>
       <a href="News.php">الاخبار</a>
       <a href="logout.php">تسجيل خروج</a>
+=======
+      <a href="messages.php">الرسائل</a>
+      <a href="News.php">الاخبار</a>
+      <a href="logout.php">تسجيل الخروج</a>
+>>>>>>> 79cc427ad1903c9fe15f28c0dcd9661bca3d5814
     </div>
 
     <div class="content">

@@ -1,10 +1,9 @@
-<?php
+<!-- <?php
 session_start();
 include('config.php');
+$mm='';
 if($_SESSION){
     header('location:addNews.php');
-
-
 }else{
 
 
@@ -14,13 +13,13 @@ if($_SERVER['REQUEST_METHOD']=='POST' && (isset($_POST['submit']) && isset($_POS
 $email = $_POST['email'];
 $password = $_POST['password'];
 $name = $_POST['name'];
-$pass_hash=sha1($password);
+// $pass_hash=sha1($password);
 
 
 // $sql ="INSERT INTO `users` ( `email`, `password`,`name`) VALUES (  '$email','$pass_hash','$name');";
 // $sql= "SELECT * FROM `users` WHERE  email=$email";
 
-$sql = "SELECT * FROM `users` WHERE `email`='$email' AND `password`='$pass_hash' LIMIT 1;";
+$sql = "SELECT * FROM `users` WHERE `email`='$email' AND `password`='$password' LIMIT 1;";
 $result = mysqli_query($conn,$sql);
 if($row=mysqli_fetch_array($result)){
 //   echo   "<script >alert('metawea')</script>";
@@ -28,27 +27,25 @@ if($row=mysqli_fetch_array($result)){
 $_SESSION['id']=$row['id'];
 $_SESSION["name"]=$row['name'];
 $_SESSION["email"]=$row['email'];
-    header('location:addNews.php');
-
-
+header('location:addNews.php');
 
 }else{
-    header('location:index.php');
+   
+    $error="<p>الايميل او الباسورد غير صحيح برجاء اعادة المحاولة ببيانات صحيحة</P>";
 
+    
 };
    
  
-mysqli_free($result);
+
     
 }else {
-    // echo "xxxxxxxxxxxxxxxxxxx";
-    // header('location:index.php');
-    
-    // header('location:addNews.php');
+    echo "xxxxxxxxxxxxxxxxxxx";
+
 };
 mysqli_close($conn);
 }
-?>
+?> -->
 
 <!doctype html>
 <html lang="en">
@@ -76,6 +73,8 @@ mysqli_close($conn);
             <label>Password </label>
             <input autocomplete="off" type="password" name="password" class="form-control" placeholder="enter your password">
             <button type="submit" name="submit" class="btn-login">login</button>
+            <?php if(isset($error)){ echo $error;}?>
+            
      
     </form>
 </div>
