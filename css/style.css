@@ -252,16 +252,27 @@ nav ul li a:hover {
 }
 
 /* slider */
+.section-padding {
+  padding: 2rem 0;
+}
+.brand-carousel {
+  background-color:var(--orange);
+  margin-top: 2rem;
+}
+
+
+.single-logo{
+    padding: 2rem;    
+}
 
 .slider {
   max-width: 100%;
-  position: relative;
+  /* position: relative; */
   margin: auto;
 }
 .slider h2,
 .news h2 {
     padding: 0;
-
   padding-bottom: 2rem;
 }
 
@@ -269,30 +280,20 @@ nav ul li a:hover {
   margin-top: 3rem;
 }
 
-.slides {
-  display: none;
-  width: 100%;
-  justify-content: space-evenly;
-  padding: 5rem 0;
-  align-items: center;
-  background-color: var(--orange);
+/* .section-padding {
+	padding: 2rem 0;
+}
+.brand-carousel {
+	background-color:var(--orange);
+	margin-top: 2.5rem;
 }
 
-@keyframes move {
-  from {
-    left: 0px;
-  }
-  to {
-    left: 100%;
-  }
-}
+.single-logo{
+    padding: 2rem;
+} */
 
-.slides img {
-  width: 250px;
-  height: 100px;
-  position: relative;
-  animation: move 5s linear infinite;
-}
+
+
 
 /* 
 
@@ -479,7 +480,8 @@ nav ul li a:hover {
 
 .lawyers h2 {
   padding: 1rem 0;
-  padding-right: 0.5rem;
+  padding-right: 1.5rem;
+  font-weight: bold;
 }
 .partners h2 {
   font-size: 2rem;
@@ -491,7 +493,8 @@ nav ul li a:hover {
   color: var(--black-80);
   font-size: 1rem;
   line-height: 140%;
-  padding-right: 0.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 /* about */

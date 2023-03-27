@@ -40,7 +40,7 @@ if (!$_SESSION) {
 
 <body>
   <div class="dashboard">
-  <button class="hamburger">
+    <button class="hamburger">
       <i class="fa-solid fa-bars"></i>
     </button>
     <div class="sidebar">

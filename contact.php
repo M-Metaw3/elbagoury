@@ -38,37 +38,37 @@
         <div class="contact-info">
           <div class="info">
             <div id="mobile">
-              <!-- <h3>ارقام التواصل</h3> -->
+              <h3>ارقام التواصل</h3>
               <!-- <i class="fa-solid fa-phone"></i> -->
               <ul>
                 <li>
-                  <i class="fa-solid fa-phone"></i>
+                  <!-- <i class="fa-solid fa-phone"></i> -->
                   011-1279-2102
                 </li>
                 <li>
-                  <i class="fa-solid fa-phone"></i>
+                  <!-- <i class="fa-solid fa-phone"></i> -->
                   011-1279-2102
                 </li>
                 <li>
-                  <i class="fa-solid fa-phone"></i>
+                  <!-- <i class="fa-solid fa-phone"></i> -->
                   011-1279-2102
                 </li>
               </ul>
             </div>
             <div id="address">
-              <!-- <h3>فروعنا</h3> -->
+              <h3>فروعنا</h3>
               <!-- <i class="fa-solid fa-location-dot"></i> -->
               <ul>
                 <li>
-                  <i class="fa-solid fa-location-dot"></i>
+                  <!-- <i class="fa-solid fa-location-dot"></i> -->
                   31 شارع الحايس-شبرا
                 </li>
                 <li>
-                  <i class="fa-solid fa-location-dot"></i>
+                  <!-- <i class="fa-solid fa-location-dot"></i> -->
                   41 الخليفة المأمون - شبرا الخيمة، القليوبية
                 </li>
                 <li>
-                  <i class="fa-solid fa-location-dot"></i>
+                  <!-- <i class="fa-solid fa-location-dot"></i> -->
                   28 مراد - الدقي، الجيزة</li>
               </ul>
             </div>

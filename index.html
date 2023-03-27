@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./imgages/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="./imgages/favicon.svg" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />    
+    
     <title>الباجوري-الصفحة الرئيسية</title>
   </head>
   <body id="home" onload="onHomePageLoad()">
@@ -27,7 +30,6 @@
           <li><a class="nav-link" href="news.php">الأخبار</a></li>
           <li><a class="nav-link" href="contact.php">تواصل معنا</a></li>
           <li><a class="nav-link" href="./dashboard/index.php">المسؤل</a></li>
-
         </ul>
       </nav>
     </header>
@@ -465,42 +467,48 @@
       </div>
     </section>
     <!-- slider -->
-    <!-- <section class="bg-primary py">
-      <div class="slider">
-        <h2 class="text-center">شركاء النجاح</h2>
-        <div class="slides">
-            <img src="./imgages/logo-light.png" alt="" />
-            <img src="./imgages/logo-light.png" alt="" />
-            <img src="./imgages/logo-light.png" alt="" />
-            <img src="./imgages/logo-light.png" alt="" />
+    <section class="bg-primary py">
+      <h2 class="text-center">شركاء النجاح</h2>
+      <div class="brand-carousel section-padding owl-carousel">
+        <div class="single-logo">
+          <img alt="" src="./imgages/logo-light.png" />
+        </div>
+        <div class="single-logo">
+          <img alt="" src="./imgages/logo-light.png" />
+        </div>
+        <div class="single-logo">
+          <img alt="" src="./imgages/logo-light.png" />
+        </div>
+        <div class="single-logo">
+          <img alt="" src="./imgages/logo-light.png" />
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <section class="bg-primary py">
+    <!-- <section class="bg-primary py">
       <h2 class="text-center py-2">شركاء النجاح</h2>
       <section class="customer-logos slider">
         <div class="slides">
           <div class="slide">
-            <img src="./imgages/logo-light.png" height="100" width="250" alt="" />
+            <img
+              src="./imgages/logo-light.png"
+              height="100"
+              width="250"
+              alt=""
+            />
           </div>
           <div class="slide">
-            <img src="./imgages/22.png"  height="100" width="250" alt="" />
+            <img src="./imgages/22.png" height="100" width="250" alt="" />
           </div>
-          
+          <div class="slide">
+            <img src="./imgages/civil.jpg" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./imgages/5.svg" height="100" width="250" alt="" />
+          </div>
         </div>
-        <div class="slides">
-          
-          <div class="slide">
-            <img src="./imgages/civil.jpg"  height="100" width="250" alt="" />
-          </div>
-          <div class="slide">
-            <img src="./imgages/5.svg"  height="100" width="250" alt="" />
-          </div>
-
-        </div>
-      </div>
-    </section>
+      </section>
+    </section> -->
 
     <section class="bg-primary py">
       <h2 class="text-center">أخر أخبار المؤسسة</h2>
@@ -526,14 +534,17 @@
                 </div>
                 <div class="mid row">
                   <div class="col col-r">
-                    <img src="./imgages/صور-محكمة-النقص- 1.png" width="100%" alt="" />
+                    <img
+                      src="./imgages/صور-محكمة-النقص- 1.png"
+                      width="100%"
+                      alt=""
+                    />
                   </div>
                 </div>
                 <div class="row">
                   <div class="bottom col"></div>
                 </div>
               </div>
-    
             </div>
           </div>
           <div class="news-slides">
@@ -554,7 +565,11 @@
                 </div>
                 <div class="mid row">
                   <div class="col col-r">
-                    <img src="./imgages/صور-محكمة-النقص- 1.png"  width="100%" alt="" />
+                    <img
+                      src="./imgages/صور-محكمة-النقص- 1.png"
+                      width="100%"
+                      alt=""
+                    />
                   </div>
                 </div>
                 <div class="row">
@@ -613,11 +628,40 @@
         </p>
       </section>
     </footer>
-    <script
-      src="https://kit.fontawesome.com/f5a62c1078.js"
-      crossorigin="anonymous"
-    ></script>
 
-    <script src="./js/main.js"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(".brand-carousel").owlCarousel({
+        loop: true,
+        margin: 50,
+        dots: false,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        items : 4,
+        responsive: {
+          0: {
+            items: 2,
+          },
+
+          600: {
+            items: 3,
+          },
+
+          1024: {
+            items: 4,
+          },
+
+        },
+      });
+    </script>
+     <script
+     src="https://kit.fontawesome.com/f5a62c1078.js"
+     crossorigin="anonymous"
+   ></script>
+
+   <script src="./js/main.js"></script>
   </body>
 </html>

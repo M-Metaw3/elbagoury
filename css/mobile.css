@@ -332,26 +332,27 @@
 
 .lawyers  h2 {
   padding: 0.7rem 0;
-  padding-right: .2rem;
+  padding-right: 0.5rem;
 
 
 }
  .partners  h2 {
-  font-size: 1rem;
+  font-size: .8rem;
 }
  .assistants  h2 {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 .lawyers h6 {
-  font-size: 0.9rem;
-  padding-right: .2rem;
+  font-size: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.8rem;
 }
 
 .partners{
   width: 48%;
 }
 .assistants{
-  width: 45%;
+  width: 48%;
 }
 /* about */
 .about{
@@ -400,6 +401,7 @@
   }
   .footer-left{
     width: 100%;
+    padding-top: 1.5rem;
   }
   .footer{
     /* justify-content: space-evenly; */

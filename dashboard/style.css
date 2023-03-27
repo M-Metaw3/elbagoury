@@ -8,6 +8,7 @@
   --green-70:rgba(0, 84, 25,70%);
   --black: rgb(34, 34, 34);
   --black-50: rgba(34, 34, 34,50%);
+  --black-15: rgba(34, 34, 34,15%);
   --white: rgb(255, 248, 219);
   --white-70:rgba(255, 248, 219,70%);
   --white-5:rgba(255, 248, 219,10%);
@@ -118,14 +119,16 @@ body{
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 15%;
+  width: 200px;
   background-color: #FFFFFF;
   position: fixed;
-  /* top: 0; */
+  top: 0;
   /* right: 0; */
   height: 100%;
   overflow:auto;
   z-index: 5;
+  box-shadow: -2px 0 10px var(--black-15);
+
 }
 .sidebar img{
   padding: 1rem 0;
@@ -250,15 +253,14 @@ input[type=file]{
 table { 
   width: 80%; 
   border-collapse: collapse; 
+  margin: 0 auto;
 }
-/* tr:nth-of-type(odd) {  */
-  tr{ 
+
+tr{ 
   background:var(--green-10); 
   color: var(--black);
   margin: 2rem;
   border: 1px solid var(--green-10); 
-
-
 }
 th { 
   background:var(--orange); 
@@ -324,29 +326,25 @@ table a{
 
 
 
-@media only screen and (max-width: 992px){
-  .add-news{
-    width: 100%;
-    margin: 0 auto;
-
-  }
+@media only screen and (max-width:1300px){
   
   .dashboard{
     display: block;
   }
   .sidebar {
     display: none;
-    width: 50%;
   }
   .content {
     margin: 0 auto;
-      width: 80%;
+      width: 90%;
       display: block;
+      clear: both;
       
   }
 
   .hamburger {
     display: block;
+    float: left;
     margin-bottom: 1rem;
     
   }
@@ -356,6 +354,9 @@ table a{
   .sidebar.show {
     display: block
   }
+
+
+  /* login */
   .login-form {
     height: 400px;
     width: 250px;
@@ -378,4 +379,30 @@ table a{
     padding: 0.8rem 0;
     font-size: 1rem;
   }
+
+  /* add form */
+  .add-news{
+    margin: 0 auto;
+    width: 80%;
+    
+
+  }
+
+  /* table */
+  
+tr{ 
+  margin: 1rem;
+}
+th { 
+  padding: .5rem; 
+  font-size: 1rem;
+}
+
+td{
+  padding: .3rem; 
+  font-size: 1rem;
+
+}
+
+
 }
