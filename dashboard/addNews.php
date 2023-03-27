@@ -33,48 +33,53 @@ if (!$_SESSION) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../imgages/favicon.svg">
   <link rel="stylesheet" href="./style.css" />
-  <title>add News</title>
+  <title>إضافة خبر</title>
 </head>
 
 <body>
   <div class="dashboard">
+  <button class="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <div class="sidebar">
+ 
+      <div class="nav-menu">
+        <img src="../imgages/logo.svg" alt="">
+        <div class="admin-name">
+          <?php
+          echo "مرحبا  " . $_SESSION['name'];
+          ?>
+        </div>
+        <div class="select">
+          <span>الأخبار</span>
+          <span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </div>
 
-      <img src="../imgages/logo.svg" alt="">
-      <div class="admin-name">
-        <?php
-        echo "مرحبا  " . $_SESSION['name'];
-        ?>
+        <div class="news">
+          <a href="News.php">عرض الأخبار</a>
+          <a href="addNews.php">إضافة خبر</a>
+        </div>
+        <a href="messages.php">الرسائل</a>
+        <a class="logout" href="logout.php">تسجيل خروج</a>
       </div>
-      <!-- <a href="News.php"  class="select"> -->
-      <div class="select">
-      <span>الأخبار</span>
-      <span >
-        <i class="fa-solid fa-chevron-down"></i>
-      </span>
-      </div>
-   
-      <!-- </a> -->
-      <div class="news">
-        <a href="News.php">عرض الأخبار</a>
-        <a href="addNews.php">إضافة خبر</a>
-      </div>
-      <a href="messages.php">الرسائل</a>
-      <a class="logout" href="logout.php">تسجيل خروج</a>
     </div>
+
 
     <div class="content">
       <form class="add-news" action='adduserScript.php' method="post" enctype="multipart/form-data">
         <!-- <label for="fname">العنوان</label> -->
         <input autocomplete="off" type="text" id="fname" name="fname" placeholder="عنوان الخبر"><br>
-        <input autocomplete="off" type="text" id="fname" name="aname" placeholder="اختصار"><br>
+        <input autocomplete="off" type="text" id="aname" name="aname" placeholder="اختصار"><br>
         <!-- <label for="lname">الخبر</label> -->
         <textarea autocomplete="off" name="news" id="" cols="20" rows="6" placeholder="تفاصيل الخبر..."></textarea>
         <label for="img" class="file-input">
-        أرفع الصورة   
-        <i class="fa-solid fa-camera"></i>
-          <input type="file" id="img" name="img" onchange="uploadImag()" >
+          أرفع الصورة
+          <i class="fa-solid fa-camera"></i>
+          <input type="file" id="img" name="img" onchange="uploadImag()">
           <span id="imageName"></span>
         </label>
         <button type="submit" name='mmm' class="btn-add">نشر</button>

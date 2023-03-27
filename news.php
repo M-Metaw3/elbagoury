@@ -11,7 +11,7 @@ include('dashboard/config.php');
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <link rel="icon" type="image/x-icon" href="./imgages/favicon.svg">
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/mobile.css" />
   <title>الاخبار</title>
@@ -46,18 +46,6 @@ include('dashboard/config.php');
 
 
 
-        <?php
-
-$sqlget="SELECT * FROM `news`  ORDER BY created_at DESC  LIMIT 2 ";
-$resultget = mysqli_query($conn,$sqlget);
-if($resultget){
-    
-    while($row=mysqli_fetch_array($resultget)){
-    ?>
-    
-    
-    <div class="container">
-      <h2 class="text-center">الأخبار</h2>
     <?php
 
     $sqlget = "SELECT * FROM `news`  ORDER BY created_at DESC  LIMIT 2 ";
@@ -68,53 +56,71 @@ if($resultget){
     ?>
 
 
-    <?php
+        <div class="container">
+          <h2 class="text-center">الأخبار</h2>
+          <?php
 
-        $id = $row['id'];
-        $news = $row['news'];
-        $header = $row['header'];
-        $created_at = $row['created_at'];
-        $image = $row['image'];
-        $bref = $row['bref'];
+          $sqlget = "SELECT * FROM `news`  ORDER BY created_at DESC ";
+          $resultget = mysqli_query($conn, $sqlget);
+          if ($resultget) {
+
+            while ($row = mysqli_fetch_array($resultget)) {
+          ?>
+
+
+      <?php
+
+              $id = $row['id'];
+              $news = $row['news'];
+              $header = $row['header'];
+              $created_at = $row['created_at'];
+              $image = $row['image'];
+              $bref = $row['bref'];
 
 
 
 
-echo '
+              echo '
 <div class="news">
   <div class="rectangle-section left-rectangle">
     <div class="content">
-    <h6>' . $created_at . '</h6>
+    <h2 >' . $header . '</h2>
 
-      <h2 >' . $header . '</h2>
       <p>
       ' . $bref . '  
       </p>
     </div>
     <div class="rectangle-section-img">
-      <div class="green-rectangle">
-        <img  src="./images/'.$image.'" alt="" />
+    <div class="row">
+      <div class="top col"></div>
+    </div>
+    <div class="mid row">
+      <div class="col col-r">
+      <img  src="./images/' . $image . '" width="100%" alt="" />
       </div>
     </div>
+    <div class="row">
+      <div class="bottom col"></div>
+    </div>
+  </div>
   </div>
   <div class="text-center">
     <a href="#">
-<td ><button><a href = "Details.php?updatedid='.$id.'">اقراء المزيد ....</a></td></button>
+<td ><button class="btn"><a href = "Details.php?updatedid=' . $id . '" >اقراء المزيد ....</a></button></td>
  
     </a>
   </div>
 </div>
 
 ';
-}
+            }
+          }
+        }
+      }
 
-}
-}
-} 
-
-// mysqli_free($resultget);
-mysqli_close($conn);
-?>
+      // mysqli_free($resultget);
+      mysqli_close($conn);
+      ?>
 
 
 

@@ -19,16 +19,26 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
-  direction: rtl;
-  
+  direction: rtl; 
+  text-decoration: none;
+
 }
+
+  .container{
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+    
+  }
 body{
   background-color: var(--white);
 
 }
 .login {
   background-image: url(../imgages/background.png) ;
+  background-position: center center;
   background-size:cover;
+  /* background-attachment: fixed; */
   background-repeat: no-repeat;
   height: 100VH;
 }
@@ -48,6 +58,7 @@ body{
   border: 2px solid rgba(255, 255, 255, 0.1);
   padding: 50px 35px;
 }
+
 .login-form * {
   font-family: "Cairo", sans-serif;
   letter-spacing: 0.5px;
@@ -103,16 +114,18 @@ body{
 }
 
 /* sidebar */
+
 .sidebar {
   margin: 0;
   padding: 0;
   width: 15%;
   background-color: #FFFFFF;
   position: fixed;
-  top: 0;
-  right: 0;
+  /* top: 0; */
+  /* right: 0; */
   height: 100%;
-  /* overflow:auto; */
+  overflow:auto;
+  z-index: 5;
 }
 .sidebar img{
   padding: 1rem 0;
@@ -173,7 +186,7 @@ justify-content: space-between;
 .add-news{
   width: 50%;
   background-color: var(--white-5);
-  position: absolute;
+  /* position: absolute; */
   /* padding:1rem 2rem; */
 
 }
@@ -228,9 +241,9 @@ input[type=file]{
   padding: .5rem;
 
 }
-/* .hscroll {
+.hscroll {
   overflow-x: auto;
-} */
+}
 
 
 /* table */
@@ -243,6 +256,7 @@ table {
   background:var(--green-10); 
   color: var(--black);
   margin: 2rem;
+  border: 1px solid var(--green-10); 
 
 
 }
@@ -250,15 +264,15 @@ th {
   background:var(--orange); 
   color: var(--white); 
   font-weight: bold;
-  padding: 1.2rem; 
+  padding: .7rem; 
 
 }
 td, th { 
-  /* border: 1px solid var(--green-10);  */
   text-align: center;
 }
 td{
   padding: .5rem; 
+
 }
 table a{
   text-decoration: none;
@@ -267,6 +281,42 @@ table a{
 
 
 
+.success-msg {
+  color: var(--green);
+  background-color: var(--green-10);
+  margin-top:15%;
+  margin-bottom:1rem;
+  padding: 10px;
+  /* border-radius: 3px 3px 3px 3px; */
+  text-align: center;
+}
+
+.back-btn{
+  background-color:var(--orange);
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  /* border-radius: .3rem; */
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+}
+
+.back-btn a{
+  color:var(--white);
+
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  border: 0;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--orange);
+  background-color:#FFFFFF;
+}
 
 
 
@@ -274,8 +324,58 @@ table a{
 
 
 
+@media only screen and (max-width: 992px){
+  .add-news{
+    width: 100%;
+    margin: 0 auto;
 
+  }
+  
+  .dashboard{
+    display: block;
+  }
+  .sidebar {
+    display: none;
+    width: 50%;
+  }
+  .content {
+    margin: 0 auto;
+      width: 80%;
+      display: block;
+      
+  }
 
-
-@media only screen and (max-width: 767px){
+  .hamburger {
+    display: block;
+    margin-bottom: 1rem;
+    
+  }
+  .hamburger:focus {
+    outline: none;
+  }
+  .sidebar.show {
+    display: block
+  }
+  .login-form {
+    height: 400px;
+    width: 250px;
+    border-radius: 10px;
+    padding: 25px 15px;
+  }
+  .login-form img {
+    margin-bottom: 1rem;
+  }
+  .login-form label {
+    margin-top: 1rem;
+  }
+  .form-control {
+    height: 40px;
+    padding: 0 .3rem;
+    margin-top: 0.2rem;
+  }
+  .btn-login {
+    margin-top: 3rem;
+    padding: 0.8rem 0;
+    font-size: 1rem;
+  }
 }

@@ -32,18 +32,19 @@ if($result){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../imgages/favicon.svg">
     <link rel="stylesheet" href="./style.css" />
-    <title>contact</title>
+    <title>تواصل معنا</title>
 </head>
-<body><div>
-
-
-  
-    <h1><?php if($x){ echo  $x;}else{ echo  $y;}?></h1>
-
-
-
-    <button><a href="../index.html">الرئيسية</a></button>
+<body>
+    <div class="container">
+    <div class="success-msg">
+        <h1><?php if($x){ echo  $x;}else{ echo  $y;}?></h1>
     </div>
+    <button class="back-btn"><a href="../index.html" >الرجوع للصفحة الرئيسية</a></button>
+
+    </div>
+    
+
 </body>
 </html>

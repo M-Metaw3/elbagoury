@@ -15,43 +15,48 @@ if (!$_SESSION) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../imgages/favicon.svg">
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>الأخبار</title>
 </head>
 
 <body>
     <div class="dashboard">
-        <div class="sidebar">
-
-            <img src="../imgages/logo.svg" alt="">
-            <div class="admin-name">
-                <?php
-                echo "مرحبا  " . $_SESSION['name'];
-                ?>
-            </div>
-            <div class="select">
-                <span>الأخبار</span>
-                <span>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </span>
-            </div>
-            <div class="news">
-                <a href="News.php">عرض الأخبار</a>
-                <a href="addNews.php">إضافة خبر</a>
-            </div>
-            <a href="messages.php">الرسائل</a>
-            <a class="logout" href="logout.php">تسجيل خروج</a>
+    <button class="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="sidebar">
+ 
+      <div class="nav-menu">
+        <img src="../imgages/logo.svg" alt="">
+        <div class="admin-name">
+          <?php
+          echo "مرحبا  " . $_SESSION['name'];
+          ?>
         </div>
+        <div class="select">
+          <span>الأخبار</span>
+          <span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </span>
+        </div>
+
+        <div class="news">
+          <a href="News.php">عرض الأخبار</a>
+          <a href="addNews.php">إضافة خبر</a>
+        </div>
+        <a href="messages.php">الرسائل</a>
+        <a class="logout" href="logout.php">تسجيل خروج</a>
+      </div>
+    </div>
 
         <div class="content hscroll">
             <table>
                 <tr>
                     <th>الرقم التعريفي</th>
                     <th>العنوان</th>
-                    <th>الخبر</th>
-                    <th>الاختصار</th>
-
-
+                    <th>موجز الخبر</th>
+                    <th style="width:30%">الخبر</th>
                     <th> تاريخ الخبر</th>
                     <th>صورة الخبر</th>
                     <th>تعديل</th>
@@ -78,29 +83,23 @@ if (!$_SESSION) {
                         $image = $row['image'];
                         $bref = $row['bref'];
 
-                        
-
-
 
                         echo '
+                            <tr >
+                            <td " >' . $id . '</td>
+                            <td >' . $header . '</td>
+                            <td >' . $bref . '</td>
 
+                            <td >' . $news . '</td>
+                            <td >' . $created_at . '</td>
+                            <td >
+                                <img src="../images/' . $image . '" width= 100 srcset="">
+                            </td>
+                            <td ><a href = "updated.php?updatedid=' . $id . '"><i class="fa-solid fa-pen"></i></a></td>
+                            <td ><a href="delete.php?deleteid=' . $id . '&image=' . $image . '"><i class="fa-solid fa-trash"></i></a></td>
+                            </tr>
 
-
-<tr >
-<td " >' . $id . '</td>
-<td >' . $header . '</td>
-<td >' . $news . '</td>
-<td >' . $bref . '</td>
-
-<td >' . $created_at . '</td>
-<td >
-    <img src="../images/' . $image . '" width= 100 srcset="">
-</td>
-<td ><a href = "updated.php?updatedid=' . $id . '"><i class="fa-solid fa-pen"></i></a></td>
-<td ><a href="delete.php?deleteid=' . $id . '&image=' . $image . '"><i class="fa-solid fa-trash"></i></a></td>
-</tr>
-
-';
+                            ';
                     }
                 } ?>
 

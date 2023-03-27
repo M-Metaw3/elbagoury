@@ -14,6 +14,7 @@ if($resulta){
     $newsa=$rowa['news'];
     $headera=$rowa['header'];
     $image=$rowa['image'];
+    $bref = $rowa['bref'];
     
 
    
@@ -60,8 +61,9 @@ echo $image_name;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../imgages/favicon.svg">
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>تعديل</title>
 </head>
 <body>
     <div class="dashboard">
@@ -93,8 +95,9 @@ echo $image_name;
             <form method="post" enctype="multipart/form-data" class="add-news">
 
                 <!-- <label for="fname">العنوان</label><br> -->
-                <input value=<?php echo $headera ?> type="text" id="fname" name="fname"><br>
+                <input value=<?php echo $headera ?> type="text" id="fname" name="fname">
                 <!-- <label for="lname">الخبر</label><br> -->
+                <input value=<?php echo $bref ?>  type="text" id="aname" name="aname">
                 <textarea name="news" id="" cols="20" rows="6"><?php echo $newsa ?></textarea>
                 <?php echo '<img src="../images/' . $image . '" width= 100 srcset="">' ?><br>
 
