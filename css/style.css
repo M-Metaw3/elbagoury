@@ -258,6 +258,8 @@ nav ul li a:hover {
 .brand-carousel {
   background-color:var(--orange);
   margin-top: 2rem;
+  direction: ltr;
+
 }
 
 
