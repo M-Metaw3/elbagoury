@@ -10,7 +10,7 @@
       width: 90%;
     }
     .py {
-      padding-top: 5rem;
+      padding-top: 3rem;
       /* padding-bottom: 1rem; */
     }
 
@@ -132,7 +132,7 @@
       width: 90%;
     }
     .py {
-      padding-top: 4rem;
+      padding-top: 2rem;
       /* padding-bottom: 0.5rem; */
     }
 
@@ -258,7 +258,15 @@
   }
 
   /* slider */
-
+  .section-padding {
+    padding: 1rem 0;
+  }
+  .brand-carousel {
+    margin-top: 1rem;
+  }
+  .single-logo{
+    padding: 1rem;    
+}
   .slider h2 ,.news h2{
     padding-bottom :2rem ;
   }

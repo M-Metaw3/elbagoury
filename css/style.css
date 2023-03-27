@@ -31,7 +31,7 @@ body {
   direction: ltr;
 }
 .py {
-  padding-top: 6rem;
+  padding-top: 4rem;
   /* padding-bottom: 2rem; */
 }
 .pb-3 {
@@ -257,14 +257,15 @@ nav ul li a:hover {
 }
 .brand-carousel {
   background-color:var(--orange);
-  margin-top: 2rem;
+  margin-top: 4rem;
   direction: ltr;
+  z-index: 0;
 
 }
 
 
 .single-logo{
-    padding: 2rem;    
+    padding: 2rem;  
 }
 
 .slider {
