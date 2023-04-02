@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/mobile.css" />
     <link rel="icon" type="image/x-icon" href="./imgages/favicon.svg">
 
-    <title>للتواصل</title>
+    <title>مؤسسة الباجوري للمحاماة</title>
   </head>
   <body>
     <header id="navbar">
@@ -31,7 +31,7 @@
       </nav>
 
     </header>
- 
+
     <section class="text-center bg-primary">
       <div class="container contact py">
         <h2 class="">تواصل معنا</h2>
@@ -42,16 +42,10 @@
               <!-- <i class="fa-solid fa-phone"></i> -->
               <ul>
                 <li>
-                  <!-- <i class="fa-solid fa-phone"></i> -->
-                  011-1279-2102
+                  (+20) 011-1279-2102
                 </li>
                 <li>
-                  <!-- <i class="fa-solid fa-phone"></i> -->
-                  011-1279-2102
-                </li>
-                <li>
-                  <!-- <i class="fa-solid fa-phone"></i> -->
-                  011-1279-2102
+                  (+20) 012-8266-7559
                 </li>
               </ul>
             </div>
@@ -61,7 +55,7 @@
               <ul>
                 <li>
                   <!-- <i class="fa-solid fa-location-dot"></i> -->
-                  31 شارع الحايس-شبرا
+                  31 الحايس - الساحل - القاهرة
                 </li>
                 <li>
                   <!-- <i class="fa-solid fa-location-dot"></i> -->

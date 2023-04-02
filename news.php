@@ -14,7 +14,7 @@ include('dashboard/config.php');
   <link rel="icon" type="image/x-icon" href="./imgages/favicon.svg">
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/mobile.css" />
-  <title>الاخبار</title>
+  <title>مؤسسة الباجوري للمحاماة</title>
 </head>
 
 <body id="home">
@@ -87,7 +87,7 @@ include('dashboard/config.php');
     <h2 >' . $header . '</h2>
 
       <p>
-      ' . $bref . '  
+      ' . $bref . '
       </p>
     </div>
     <div class="rectangle-section-img">
@@ -107,7 +107,7 @@ include('dashboard/config.php');
   <div class="text-center">
     <a href="#">
 <td ><button class="btn"><a href = "Details.php?updatedid=' . $id . '" >اقراء المزيد ....</a></button></td>
- 
+
     </a>
   </div>
 </div>

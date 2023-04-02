@@ -15,7 +15,7 @@ $sql= "SELECT * FROM `news` WHERE  id=$id";
 
 
     $result = mysqli_query($conn, $sql);
-  
+
     if ($result) {
         while ($row = mysqli_fetch_array($result)) {
           $news= $row['news'];
@@ -23,11 +23,11 @@ $sql= "SELECT * FROM `news` WHERE  id=$id";
           $createdat= $row['created_at'];
           $image= $row['image'];
           $bref= $row['bref'];
-        
 
-          
-          
-          
+
+
+
+
           ;}
     }
 
@@ -44,7 +44,7 @@ $sql= "SELECT * FROM `news` WHERE  id=$id";
     <link rel="icon" type="image/x-icon" href="./imgages/favicon.svg">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
-    <title>Document</title>
+    <title>مؤسسة الباجوري للمحاماة</title>
 </head>
 <body>
 <header id="navbar">
@@ -81,9 +81,9 @@ $sql= "SELECT * FROM `news` WHERE  id=$id";
           <h6>' . $createdat . '</h6>
           <h2 >' . $header . '</h2>
           <p>
-          ' . $news. '  
+          ' . $news. '
           </p>
-          
+
 
         </div>
         <div class="rectangle-section-img">
@@ -101,7 +101,7 @@ $sql= "SELECT * FROM `news` WHERE  id=$id";
       </div>
     </div>
 
-   
+
     ';
     }
     ?>
