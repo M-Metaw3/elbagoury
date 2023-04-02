@@ -30,6 +30,9 @@ body {
 .ltr {
   direction: ltr;
 }
+.pt{
+  padding-top: 5rem;
+}
 .py {
   padding-top: 5rem;
   /* padding-bottom: 2rem; */
@@ -46,7 +49,6 @@ body {
 .py-5 {
   padding: 5rem 0;
 }
-
 .text-center {
   text-align: center;
 }
@@ -173,7 +175,7 @@ nav ul li a:hover {
 .experience .experience-card {
   background-color: var(--green);
   margin-bottom: 2rem;
-  /* padding: 2rem 0; */
+  padding: 0 0.5rem ;
   width: calc((100% / 3) - 2rem);
   color: var(--white);
   height: 300px;

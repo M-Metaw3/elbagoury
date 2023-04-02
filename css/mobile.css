@@ -48,6 +48,9 @@
       padding-top: 4rem;
       /* padding-bottom: 1rem; */
     }
+    .pt{
+      padding-top: 3rem;
+    }
 
   h2 {
     font-size: 2.5rem;
@@ -197,7 +200,9 @@
       padding-top: 4rem;
       /* padding-bottom: 0.5rem; */
     }
-
+    .pt{
+      padding-top: 2rem;
+    }
   h2 {
     font-size: 1.5rem;
   }
@@ -275,12 +280,13 @@
 
 
   .green-rectangle {
-    border: 0.5rem solid var(--orange);
+    border: 0.5rem solid var(--green);
   }
 
   .rectangle-section .content,
   .news .rectangle-section .content {
     width: 100%;
+
   }
   .rectangle-section-img{
     width: 100%;
@@ -302,7 +308,7 @@
 
   }
   .experience .experience-card {
-    width: 60%;
+    width: 70%;
     margin-bottom: 1rem;
     height: 200px;
   }
