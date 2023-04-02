@@ -1,3 +1,30 @@
+<?php
+
+if (isset($_POST['addcontact'])){
+    
+    $name = $_POST['name'];
+    $phone =  $_POST['phone'];
+    $subject = $_POST['subject'];
+    $message= $_POST['message'];
+    
+    if(!$name && !$email && !$mesage && !$subject){
+        echo " من فضللك ادخل بيانات رسالتك";
+    }
+    else{
+    include('./dashboard/config.php');
+$sql ="INSERT INTO `contact` ( `phone`, `subject`,`name`,`message`) VALUES (  '$phone','$subject','$name','$message');";
+$result = mysqli_query($conn,$sql);
+if($result){
+  $x =  "تم استلام رسالتك بنجاح سيتم التواصل معك ";
+}else{
+    $y=  "برجاء اعد المحاولة";
+
+}
+}
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +34,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/mobile.css" />
     <link rel="icon" type="image/x-icon" href="./imgages/favicon.svg">
-
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
     <title>مؤسسة الباجوري للمحاماة</title>
   </head>
   <body>
@@ -79,13 +106,13 @@
           </div>
         </div>
         <div class="contact-us py">
-          <form method='post' action='dashboard/Contact.php'>
+          <form method='post' onsubmit="showSuccses(event)" >
             <div class="form-group">
               <input required  type="text" name="name" placeholder="الأسم" />
               <input required type="tel" name="phone" placeholder="موبايل" />
             </div>
             <div>
-              <input require type="text" name="subject" placeholder="الموضوع" />
+              <input required type="text" name="subject" placeholder="الموضوع" />
             </div>
             <div>
               <textarea
@@ -103,7 +130,6 @@
         </div>
       </div>
     </section>
-
     <button onclick="topFunction()" id="topBtn" title="Go to top ">
       <i class="fa-sharp fa-solid fa-chevron-up"></i>
     </button>
@@ -141,11 +167,26 @@
         </p>
       </section>
     </footer>
+    <?php
+
+
+    echo"<script>
+      function showSuccses(){
+        event.preventDefault();
+        swal({  
+          text: "تم استلام رسالتك بنجاح سيتم التواصل معك ",  
+          icon: "success",  
+        })  
+      }
+      </script>";
+      ?>
+
 
     <script
       src="https://kit.fontawesome.com/f5a62c1078.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

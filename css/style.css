@@ -31,7 +31,7 @@ body {
   direction: ltr;
 }
 .py {
-  padding-top: 4rem;
+  padding-top: 5rem;
   /* padding-bottom: 2rem; */
 }
 .pb-3 {
@@ -371,7 +371,7 @@ nav ul li a:hover {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 6rem;
+  padding-top: 3rem;
 }
 
 .info {
@@ -477,7 +477,7 @@ nav ul li a:hover {
 }
 .assistants {
   width: 30%;
-  box-shadow: 5px 5px 5px var(--black-15);
+  /* box-shadow: 5px 5px 5px var(--green-70); */
 }
 .lawyers img {
   width: 100%;
@@ -798,4 +798,15 @@ li.page-title {
 
 
 
+}
+
+/* succses alert */
+.swal-modal {
+  background-color: var(--white);
+  border: 3px solid white;
+  color: var(--black);
+}
+.swal-button {
+  background-color:var(--orange);
+  border: 1px solid;
 }
