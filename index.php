@@ -513,9 +513,6 @@ if ($resultget) {
   while ($row = mysqli_fetch_array($resultget)) {
 ?>
 
-
-    <div class="container">
-      <h2 class="text-center">الأخبار</h2>
       <?php
 
       $sqlget = "SELECT * FROM `news`  ORDER BY created_at DESC LIMIT 5";
@@ -577,7 +574,6 @@ if ($resultget) {
 mysqli_close($conn);
 ?>
      
-        </div>
       </div>
 
       <div class="text-center py-2">
