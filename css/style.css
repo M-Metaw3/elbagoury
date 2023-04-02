@@ -200,7 +200,7 @@ nav ul li a:hover {
 .rectangle-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
 }
 .right-rectangle {
@@ -211,7 +211,7 @@ nav ul li a:hover {
 }
 .rectangle-section .content {
   width: 50%;
-  align-self: center;
+  /* align-self: center; */
   text-align: right;
 }
 
@@ -284,7 +284,7 @@ nav ul li a:hover {
 }
 .slider h2,
 .news h2 {
-    padding: 0;
+  padding: 0;
   padding-bottom: 2rem;
 }
 
