@@ -183,7 +183,7 @@
       width: 90%;
     }
     .py {
-      padding-top: 2rem;
+      padding-top: 4rem;
       /* padding-bottom: 0.5rem; */
     }
 
@@ -275,7 +275,7 @@
     width: 100%;
     margin: 0 auto;
   }
-  .news .rectangle-section-img img {
+   .rectangle-section-img img {
     /* width: 200px; */
     height: 180px;
   }
