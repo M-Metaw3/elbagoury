@@ -60,7 +60,7 @@ include('dashboard/config.php');
       </div>
     </section>
 
-    <section class="bg-primary py">
+    <section class="bg-primary py-2">
       <div class="container">
         <div class="rectangle-section left-rectangle">
           <div class="content">
@@ -500,8 +500,8 @@ include('dashboard/config.php');
       </div>
     </section>
 
-    <section class="bg-primary py">
-      <h2 class="text-center">أخر أخبار المؤسسة</h2>
+    <section class="bg-primary">
+    <h2 class="text-center py">أخر أخبار المؤسسة</h2>
       <div class="news container">
         <div class="slider">
         <?php
@@ -531,8 +531,6 @@ if ($resultget) {
           $created_at = $row['created_at'];
           $image = $row['image'];
           $bref = $row['bref'];
-
-
 
 
           echo '
