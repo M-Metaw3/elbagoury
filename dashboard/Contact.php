@@ -38,11 +38,7 @@ if($result){
 </head>
 <body>
     <div class="container">
-    <div class="success-msg">
-        <h1><?php if($x){ echo  $x;}else{ echo  $y;}?></h1>
-    </div>
-    <button class="back-btn"><a href="../index.html" >الرجوع للصفحة الرئيسية</a></button>
-
+        
     </div>
     
 
