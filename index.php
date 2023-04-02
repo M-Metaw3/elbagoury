@@ -1,3 +1,9 @@
+<?php
+
+include('dashboard/config.php');
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,7 +36,7 @@
           /></a>
         </div>
         <ul class="nav-menu">
-          <li><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li><a class="nav-link" href="index.php">الرئيسية</a></li>
           <li><a class="nav-link" href="about.html">عنا</a></li>
           <li><a class="nav-link" href="lawyers.html">محامونا</a></li>
           <li><a class="nav-link" href="news.php">الأخبار</a></li>
@@ -473,16 +479,23 @@
       <h2 class="text-center">شركاء النجاح</h2>
       <div class="brand-carousel section-padding owl-carousel">
         <div class="single-logo">
-          <img alt="" src="./imgages/logo-light.png" />
+          <!-- <img alt="" src="./imgages/logo-light.png" /> -->
+          <p>IRIS-Studio</p>
         </div>
         <div class="single-logo">
-          <img alt="" src="./imgages/logo-light.png" />
+          <p>Innovation House</p>
         </div>
         <div class="single-logo">
-          <img alt="" src="./imgages/logo-light.png" />
+          <p>Sokhna Sea ST</p>
+          <!-- <img alt="" src="./imgages/logo-light.png" /> -->
         </div>
         <div class="single-logo">
-          <img alt="" src="./imgages/logo-light.png" />
+          <!-- <img alt="" src="./imgages/logo-light.png" /> -->
+          <p>Adala</p>
+        </div>
+        <div class="single-logo">
+          <!-- <img alt="" src="./imgages/logo-light.png" /> -->
+          <p>Y&M for contracting & supplies</p>
         </div>
       </div>
     </section>
@@ -491,18 +504,48 @@
       <h2 class="text-center">أخر أخبار المؤسسة</h2>
       <div class="news container">
         <div class="slider">
+        <?php
+
+$sqlget = "SELECT * FROM `news`  ORDER BY created_at DESC  LIMIT 2 ";
+$resultget = mysqli_query($conn, $sqlget);
+if ($resultget) {
+
+  while ($row = mysqli_fetch_array($resultget)) {
+?>
+
+
+    <div class="container">
+      <h2 class="text-center">الأخبار</h2>
+      <?php
+
+      $sqlget = "SELECT * FROM `news`  ORDER BY created_at DESC LIMIT 5";
+      $resultget = mysqli_query($conn, $sqlget);
+      if ($resultget) {
+
+        while ($row = mysqli_fetch_array($resultget)) {
+      ?>
+
+
+  <?php
+
+          $id = $row['id'];
+          $news = $row['news'];
+          $header = $row['header'];
+          $created_at = $row['created_at'];
+          $image = $row['image'];
+          $bref = $row['bref'];
+
+
+
+
+          echo '
           <div class="news-slides">
             <div class="rectangle-section left-rectangle">
               <div class="content">
-                <h2>محكمة النقض</h2>
-                <p>
-                  مؤسسة الباجوري للمحاماة أُسست عام 1920 على يد الدكتور حسنين
-                  الباجوري وأستمر عملها القانوني حتى الأن, في هذه الفترة عملت
-                  المؤسسة على العديد من القضايا والأمور القانونية مع العديد من
-                  الشركاء كان نتيجتها ثقة الموكلين في هذه المؤسسة العريقة.
-                </p>
+                <h2>' . $header . '</h2>
+                <p>' . $bref . '</p>
                 <a href="#">
-                  <button class="btn">إقرأ المزيد...</button>
+                  <button class="btn"><a href = "Details.php?updatedid=' . $id . '" >اقراء المزيد ....</a></button>
                 </a>
               </div>
               <div class="rectangle-section-img">
@@ -512,9 +555,9 @@
                 <div class="mid row">
                   <div class="col col-r">
                     <img
-                      src="./imgages/صور-محكمة-النقص- 1.png"
-                      width="100%"
-                      alt=""
+                    src="./images/' . $image . '"
+                    width="100%"
+                    alt=""
                     />
                   </div>
                 </div>
@@ -524,37 +567,16 @@
               </div>
             </div>
           </div>
-          <div class="news-slides">
-            <div class="rectangle-section left-rectangle">
-              <div class="content">
-                <h2>محكمة النقض</h2>
-                <p>
-                  مؤسسة الباجوري للمحاماة أُسست عام 1920 على يد الدكتور حسنين
-                  الباجوري
-                </p>
-                <a href="#">
-                  <button class="btn">إقرأ المزيد...</button>
-                </a>
-              </div>
-              <div class="rectangle-section-img">
-                <div class="row">
-                  <div class="top col"></div>
-                </div>
-                <div class="mid row">
-                  <div class="col col-r">
-                    <img
-                      src="./imgages/صور-محكمة-النقص- 1.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="bottom col"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+';
+}
+}
+}
+}
+
+// mysqli_free($resultget);
+mysqli_close($conn);
+?>
+     
         </div>
       </div>
 
@@ -577,7 +599,7 @@
           <div class="footer-right titles">
             <ul class="page-titles">
               <li class="bold">المؤسسة</li>
-              <li><a href="index.html">الرئيسية</a></li>
+              <li><a href="index.php">الرئيسية</a></li>
               <li><a href="lawyers.html">محامونا</a></li>
               <li><a href="about.html">عنا</a></li>
               <li><a href="news.html">الأخبار</a></li>
@@ -615,19 +637,19 @@
         dots: false,
         nav: false,
         autoplay: true,
-        autoplayTimeout: 2000,
-        items: 4,
+        autoplayTimeout: 5000,
+        items: 5,
         responsive: {
-          0: {
-            items: 2,
+          0:{
+            items: 1,
           },
 
           600: {
-            items: 3,
+            items: 2,
           },
 
           1024: {
-            items: 4,
+            items: 3,
           },
         },
       });

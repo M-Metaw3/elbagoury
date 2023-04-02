@@ -56,7 +56,7 @@ $sql= "SELECT * FROM `news` WHERE  id=$id";
         <a href="index.html" onclick="{clickHandle}"><img src="./imgages/logo.svg" alt="logo" /></a>
       </div>
       <ul class="nav-menu">
-        <li><a class="nav-link" href="index.html">الرئيسية</a></li>
+      <li><a class="nav-link" href="index.php">الرئيسية</a></li>
         <li><a class="nav-link" href="about.html">عنا</a></li>
         <li><a class="nav-link" href="lawyers.html">محامونا</a></li>
         <li><a class="nav-link" href="news.php">الأخبار</a></li>
@@ -116,7 +116,7 @@ $sql= "SELECT * FROM `news` WHERE  id=$id";
         <div class="footer-right titles">
           <ul class="page-titles">
             <li class=" bold">المؤسسة</li>
-            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="index.php">الرئيسية</a></li>
             <li><a href="lawyers.html">محامونا</a></li>
             <li><a href="about.html">عنا</a></li>
             <li><a href="news.html">الأخبار</a></li>

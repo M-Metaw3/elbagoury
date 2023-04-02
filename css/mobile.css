@@ -35,6 +35,9 @@
   padding: 0 1rem;
   font-size: 1.1rem;
 }
+.single-logo p{
+  font-size: 1.5rem;
+}
 }
 
   @media only screen and (max-width: 992px){
@@ -308,7 +311,6 @@
   }
   .rectangle-section p {
     font-size: 1.2rem;
-
   }
   .rectangle-section h2{
     padding: 0.5rem 0;
@@ -322,8 +324,9 @@
     margin-top: 1rem;
   }
   .single-logo{
-    padding: 1rem;    
+    padding: 0.5rem 0.2rem;    
 }
+
   .slider h2 ,.news h2{
     padding-bottom :2rem ;
   }
@@ -391,7 +394,7 @@
 }
 /* lawyers */
 .lawyers {
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
   width: 100%;
 }
 
@@ -421,7 +424,7 @@
 }
 /* about */
 .about{
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
 }
 .about-img{
   padding-top: 1rem;
@@ -429,6 +432,8 @@
 
 .about-content ,.about-img{
   width: 100%;
+  padding: 0;
+
 }
 
 .about  h2 {
@@ -441,7 +446,7 @@
 
 /* news */
 .news{
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
 }
 
   /* modal */

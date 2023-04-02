@@ -16,6 +16,7 @@ $sql ="INSERT INTO `contact` ( `phone`, `subject`,`name`,`message`) VALUES (  '$
 $result = mysqli_query($conn,$sql);
 if($result){
   $x =  "تم استلام رسالتك بنجاح سيتم التواصل معك ";
+  showSuccses();
 }else{
     $y=  "برجاء اعد المحاولة";
 
@@ -49,7 +50,7 @@ if($result){
           /></a>
         </div>
         <ul class="nav-menu">
-          <li><a class="nav-link" href="index.html">الرئيسية</a></li>
+        <li><a class="nav-link" href="index.php">الرئيسية</a></li>
           <li><a class="nav-link" href="about.html">عنا</a></li>
           <li><a class="nav-link" href="lawyers.html">محامونا</a></li>
           <li><a class="nav-link" href="news.php">الأخبار</a></li>
@@ -103,7 +104,7 @@ if($result){
           </div>
         </div>
         <div class="contact-us py">
-          <form method='post' onsubmit="showSuccses(event)" >
+          <form method='post'>
             <div class="form-group">
               <input required  type="text" name="name" placeholder="الأسم" />
               <input required type="tel" name="phone" placeholder="موبايل" />
@@ -136,7 +137,7 @@ if($result){
           <div class="footer-right titles">
             <ul class="page-titles">
               <li class="bold">المؤسسة</li>
-              <li><a href="index.html">الرئيسية</a></li>
+              <li><a href="index.php">الرئيسية</a></li>
               <li><a href="lawyers.html">محامونا</a></li>
               <li><a href="about.html">عنا</a></li>
               <li><a href="news.html">الأخبار</a></li>
@@ -167,7 +168,6 @@ if($result){
     
     <script>
       function showSuccses(){
-        event.preventDefault();
         swal({  
           text: "تم استلام رسالتك بنجاح سيتم التواصل معك ",  
           icon: "success",  

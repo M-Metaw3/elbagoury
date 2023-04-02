@@ -255,7 +255,7 @@ nav ul li a:hover {
 
 /* slider */
 .section-padding {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 .brand-carousel {
   background-color:var(--orange);
@@ -267,8 +267,14 @@ nav ul li a:hover {
 
 
 .single-logo{
-    padding: 2rem;  
+    padding: 0.2rem;  
     width: 100%;
+    /* border:1px solid  var(--white) ; */
+}
+.single-logo p{
+  color: var(--white);
+  font-size: 2.2rem;
+  text-align: center;
 }
 
 .slider {
@@ -815,7 +821,4 @@ li.page-title {
   border: none;
   outline: none;
 } */
-/* .swal-button:hover {
-  background-color:var(--orange);
-  color: var(--black);
-} */
+
