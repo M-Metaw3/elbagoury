@@ -16,7 +16,6 @@ $sql ="INSERT INTO `contact` ( `phone`, `subject`,`name`,`message`) VALUES (  '$
 $result = mysqli_query($conn,$sql);
 if($result){
   $x =  "تم استلام رسالتك بنجاح سيتم التواصل معك ";
-  showSuccses();
 }else{
     $y=  "برجاء اعد المحاولة";
 
