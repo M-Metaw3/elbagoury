@@ -28,6 +28,13 @@
 .rectangle-section-img img {
   height: 260px;
 }
+.info i {
+  font-size: 2rem;
+}
+.info #address ul {
+  padding: 0 1rem;
+  font-size: 1.1rem;
+}
 }
 
   @media only screen and (max-width: 992px){
@@ -113,15 +120,16 @@
     justify-content: center;
   }
 
-  .info i {
-    /* font-size: 3rem; */
-  }
+
   .info #mobile,
   .info #address {
     /* height: 200px; */
     width: 40%;
   }
-
+  .info #address ul {
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+  }
   
 /* lawyers */
 .lawyers {
@@ -347,9 +355,9 @@
     height:300px;
   }
 
-  .info i {
-    font-size: 2.5rem;
-  }
+  /* .info i {
+    font-size: 1.5rem;
+  } */
   
 .info #address ul{
   padding: 0 1rem;

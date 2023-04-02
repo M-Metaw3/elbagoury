@@ -181,6 +181,8 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  cursor: pointer;
+
 }
 .experience .experience-card p {
   color: var(--white);
@@ -188,7 +190,6 @@ nav ul li a:hover {
   font-size: 1.6rem;
   line-height: 140%;
   text-align: center;
-  cursor: pointer;
 }
 .experience-card img {
   width: 22%;
@@ -396,7 +397,7 @@ nav ul li a:hover {
   height: calc(250px - 1rem);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   list-style-position: inside;
 }
 .info #mobile ul {
@@ -413,9 +414,10 @@ nav ul li a:hover {
   font-size: 1.2rem;
 }
 .info i {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: var(--orange);
-  margin: 0 0.3rem;
+  margin:0 0.3rem;
+  margin-bottom: 1rem;
 }
 .info h3 {
   color: var(--orange);
@@ -456,6 +458,7 @@ nav ul li a:hover {
   font-family: "Cairo";
   font-size: 1.5rem;
   padding: 0.5rem 5rem;
+  outline: none;
 }
 .btn-submit {
   display: flex;
@@ -802,11 +805,17 @@ li.page-title {
 
 /* succses alert */
 .swal-modal {
-  background-color: var(--white);
+  /* background-color: var(--white); */
   border: 3px solid white;
   color: var(--black);
 }
-.swal-button {
+/* .swal-button {
   background-color:var(--orange);
-  border: 1px solid;
-}
+  color: var(--white);
+  border: none;
+  outline: none;
+} */
+/* .swal-button:hover {
+  background-color:var(--orange);
+  color: var(--black);
+} */

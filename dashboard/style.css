@@ -119,7 +119,7 @@ body{
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: 15%;
   background-color: #FFFFFF;
   position: fixed;
   top: 0;
@@ -333,6 +333,7 @@ table a{
   }
   .sidebar {
     display: none;
+    width: 25%;
   }
   .content {
     margin: 0 auto;
@@ -405,4 +406,11 @@ td{
 }
 
 
+}
+
+
+@media only screen and (max-width: 767px){
+  .sidebar {
+    width: 50%;
+  }
 }

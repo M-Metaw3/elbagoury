@@ -65,8 +65,8 @@ if($result){
         <div class="contact-info">
           <div class="info">
             <div id="mobile">
-              <h3>ارقام التواصل</h3>
-              <!-- <i class="fa-solid fa-phone"></i> -->
+              <!-- <h3>ارقام التواصل</h3> -->
+              <i class="fa-solid fa-phone"></i>
               <ul>
                 <li>
                   (+20) 011-1279-2102
@@ -77,8 +77,8 @@ if($result){
               </ul>
             </div>
             <div id="address">
-              <h3>فروعنا</h3>
-              <!-- <i class="fa-solid fa-location-dot"></i> -->
+              <!-- <h3>فروعنا</h3> -->
+              <i class="fa-solid fa-location-dot"></i>
               <ul>
                 <li>
                   <!-- <i class="fa-solid fa-location-dot"></i> -->
@@ -95,14 +95,11 @@ if($result){
             </div>
           </div>
           <div class="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.1786586753997!2d31.162412614940468!3d27.182121054983917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x144509f2bfb08b01%3A0xb4b57bcfbf9cb08d!2z2YXYtdmG2Lkg2LPZitiv!5e0!3m2!1sen!2seg!4v1678013881485!5m2!1sen!2seg"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d431.51496842891487!2d31.243661800429518!3d30.0907566560264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458406ba72f4d55%3A0xeceed37bfee5a128!2zMzEg2KfZhNit2KfZitiz2Iwg2KPYs9i52K_YjCDZgtiz2YUg2KfZhNiz2KfYrdmE2Iwg2YXYrdin2YHYuNipINin2YTZgtin2YfYsdip4oCsIDQzNTExMTU!5e0!3m2!1sar!2seg!4v1680433957777!5m2!1sar!2seg" 
+            style="border:0;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
           </div>
         </div>
         <div class="contact-us py">
@@ -167,20 +164,18 @@ if($result){
         </p>
       </section>
     </footer>
-    <?php
-
-
-    echo"<script>
+    
+    <script>
       function showSuccses(){
         event.preventDefault();
         swal({  
           text: "تم استلام رسالتك بنجاح سيتم التواصل معك ",  
           icon: "success",  
-        })  
+          buttons: false,
+          timer: 3000
+        });  
       }
-      </script>";
-      ?>
-
+      </script>
 
     <script
       src="https://kit.fontawesome.com/f5a62c1078.js"
