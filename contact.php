@@ -1,30 +1,3 @@
-<?php
-
-if (isset($_POST['addcontact'])){
-    
-    $name = $_POST['name'];
-    $phone =  $_POST['phone'];
-    $subject = $_POST['subject'];
-    $message= $_POST['message'];
-    
-    if(!$name && !$email && !$mesage && !$subject){
-        echo " من فضللك ادخل بيانات رسالتك";
-    }
-    else{
-    include('./dashboard/config.php');
-$sql ="INSERT INTO `contact` ( `phone`, `subject`,`name`,`message`) VALUES (  '$phone','$subject','$name','$message');";
-$result = mysqli_query($conn,$sql);
-if($result){
-  $x =  "تم استلام رسالتك بنجاح سيتم التواصل معك ";
-}else{
-    $y=  "برجاء اعد المحاولة";
-
-}
-}
-
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -103,7 +76,7 @@ if($result){
           </div>
         </div>
         <div class="contact-us py">
-          <form method='post'>
+          <form method='post' action="./dashboard/Contact.php">
             <div class="form-group">
               <input required  type="text" name="name" placeholder="الأسم" />
               <input required type="tel" name="phone" placeholder="موبايل" />
@@ -165,8 +138,9 @@ if($result){
       </section>
     </footer>
     
-    <script>
-      function showSuccses(){
+    <!-- <script>
+      function showSuccses(e){
+        e.preventDefault();
         swal({  
           text: "تم استلام رسالتك بنجاح سيتم التواصل معك ",  
           icon: "success",  
@@ -174,7 +148,7 @@ if($result){
           timer: 3000
         });  
       }
-      </script>
+      </script> -->
 
     <script
       src="https://kit.fontawesome.com/f5a62c1078.js"
